@@ -21,6 +21,11 @@ const router = createRouter({
       path: '/about',
       name: 'about',
       component: About
+    },
+    {
+      path: '/cv',
+      name: 'cv',
+      component: CV
     }
   ]
 })

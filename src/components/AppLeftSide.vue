@@ -16,16 +16,17 @@ export default {
         <RouterLink to="/about">
             <font-awesome-icon icon="fa-solid fa-address-card" />
         </RouterLink>
+        <RouterLink to="/cv">
+            <font-awesome-icon icon="fa-solid fa-file" />
+        </RouterLink>
 
     </div>
 </template>
 
-
+<font-awesome-icon icon="fa-solid fa-file" />
 
 <style lang="scss" scoped>
 .router-link-active {
-  &:hover{
     color: white;
-  }
 }
 </style>
