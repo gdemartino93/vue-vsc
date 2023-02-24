@@ -6,8 +6,10 @@ import { RouterLink, RouterView } from 'vue-router'
   <header>
 
     <div class="wrapper">
-
       <nav>
+        <div class="prova">
+          <h1>asd</h1>
+        </div>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -18,6 +20,7 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
+<style scoped lang="scss">
+@import "@/styles/styles.scss"; // importa i file di mixin
 
 </style>
