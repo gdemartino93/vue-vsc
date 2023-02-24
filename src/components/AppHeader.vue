@@ -42,7 +42,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
         </div>
 
         <div class="col-4">
-            dx
+            
         </div>
     </div>
 </template>
