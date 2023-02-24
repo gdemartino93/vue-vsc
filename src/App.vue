@@ -1,10 +1,10 @@
 
 <script>
 import { RouterLink, RouterView } from 'vue-router';
-
+import AppHeader from './components/AppHeader.vue'
 export default {
   components: {
-
+    AppHeader
   },
   methods: {
     toggleTheme() {
@@ -24,14 +24,15 @@ function toggleColorMode() {
 
 <template>
   <header>
-    <div class="wrapper">
+    <AppHeader />
+    <!-- <div class="wrapper">
       <nav>
         <button @click="toggleTheme">Toggle Theme</button>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
+    </div> -->
   </header>
 
   <RouterView />
