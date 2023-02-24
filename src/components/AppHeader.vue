@@ -20,16 +20,16 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 
                 <!-- menu non dropdown mostrato al brekpoint xl -->
                 <div class="gap-2 align-items-center d-none d-xl-block d-xl-flex">  
-                    <li>File</li>
+                    <li class="file-btn">File</li>
                     <li v-for="menuOption in menuOptions">
                         <span>{{ menuOption }}</span>
                     </li>
                 </div>
                 <!-- menu dropdown nascosto al breakpoint xl  -->
                 <div class="d-xl-none" >
-                    <li class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">File</li>
+                    <li class="dropdown-toggle file-btn" data-bs-toggle="dropdown" aria-expanded="false">File</li>
                     <ul class="dropdown-menu myDropDown">
-                        <li v-for="(menuOption,index) in menuOptions" :key="index"><a class="dropdown-item" href="#">{{ menuOption }}</a></li>
+                        <li v-for="(menuOption,index) in menuOptions" :key="index"><span class="dropdown-item" href="#">{{ menuOption }}</span></li>
                     </ul>
                 </div>
             </ul>
@@ -47,6 +47,15 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 
 <style lang="scss" scoped>
 .left-side{
+    .file-btn{
+        color: var(--color-text);
+        background-color: var(--color-bg-side);
+        border-radius: 5px;
+        &:hover{
+            background-color: var(--hover-bg-bar);
+            color: var(--color-text);
+        }
+    }
     img{
         height: 30px;
         margin-left: -20px;
@@ -57,17 +66,27 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
         li{
             cursor: pointer;
             padding: 5px;
-            a{
+            span{
                 color: var(--color-text);
+                &:hover{
+                    color: var(--color-text);
+                    background: var(--hover-bg-bar);
+                    border-radius: 5px;
+                }
             }
-            &:hover{
-                background-color: var(--hover-bg-bar);
-                border-radius: 5px;
-            }
+
         }
     }
     .myDropDown{
         background: var(--color-bg-side);
+        li{
+            span{
+                &:hover{
+                    color: var(--color-text);
+                    background: var(--hover-bg-bar);
+                }
+            }
+        }
     }
 }
 </style>
