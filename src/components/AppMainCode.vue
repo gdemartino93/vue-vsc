@@ -1,13 +1,16 @@
+
 <script>
+
     export default {
-        
-    }
+
+}
 </script>
 
 
 <template>
     <section class="main-code">
-        main
+
+        home page
     </section>
 </template>
 

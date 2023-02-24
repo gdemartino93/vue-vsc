@@ -33,23 +33,25 @@ function toggleColorMode() {
   <main>
     <section class="d-flex">
       <AppLeftSide />
-      <AppMainCode />
+      
+      <RouterView />
+
     </section>
     <!-- <button @click="toggleTheme">Toggle Theme</button> -->
 
 
   </main>
-    <!-- <div class="wrapper">
-      <nav> -->
-        <!-- <button @click="toggleTheme">Toggle Theme</button> -->
-        <!-- <RouterLink to="/">Home</RouterLink>
+
+  <!-- <div class="wrapper">
+      <nav>
+        <button @click="toggleTheme">Toggle Theme</button> 
+           <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
     </div> -->
 
 
-  <RouterView />
 </template>
 
 
