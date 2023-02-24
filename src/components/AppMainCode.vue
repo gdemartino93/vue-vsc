@@ -6,9 +6,9 @@
 
 
 <template>
-    <div class="main-code">
+    <section class="main-code">
         main
-    </div>
+    </section>
 </template>
 
 
