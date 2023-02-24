@@ -141,6 +141,11 @@ p {
   background-color: var(--color-bg-aside) ;
   height: calc(100vh - 40px);
   width: 50px;
+  color: grey;
+  font-size: 20px;
+  // &:hover{
+  //   color: white;
+  // }
 }
 .main-code{
   background-color: beige;
