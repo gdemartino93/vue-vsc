@@ -13,7 +13,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 
 <template>
 
-    <div class="col-12 cmd-bar">
+    <div class="col-12 cmd-bar d-flex">
         <div class="col-4 left-side">
             <ul class="d-flex gap-2 align-items-center">
                 <li><img :src="vscIcon" alt="Icona" ></li>
@@ -35,9 +35,12 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
             </ul>
         </div>
         
-        <div class="col-4">
-            barra di ricerca
+        <div class="col-4 d-flex align-items-center">
+            <div class="input-group">
+              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 search-bar">
+            </div>
         </div>
+
         <div class="col-4">
             dx
         </div>
@@ -89,4 +92,18 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
         }
     }
 }
+input.search-bar{
+        background-color: var(--color-bg-search);
+        color: var(--color-text);
+        height: 30px;
+        &:focus{
+            outline: none;
+        }
+    }
+.search-bar:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
 </style>

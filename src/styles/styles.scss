@@ -103,9 +103,13 @@ p {
 :root {
     --color-bg-code:white;
     --color-bg-side:#E5E5E5;
+
     // questa è la barra dei comandi in alto
     --hover-bg-bar: rgb(168, 161, 161);
     --color-text:#222;
+
+    // searchbar
+    --color-bg-search:#D9D9D9
     
 }
   
@@ -113,9 +117,13 @@ p {
   [data-theme="dark"] {
     --color-bg-code:#272822;
     --color-bg-side:#272727;
+
     // barra dei comandi in alto
     --hover-bg-bar: rgb(82, 79, 79);
     --color-text:white;
+
+    // searchbar
+    --color-bg-search:#484849;
   }
   
 

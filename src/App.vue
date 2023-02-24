@@ -1,7 +1,8 @@
 
 <script>
 import { RouterLink, RouterView } from 'vue-router';
-import AppHeader from './components/AppHeader.vue'
+import AppHeader from './components/AppHeader.vue';
+import AppLeftSide from './components/AppLeftSide.vue';
 export default {
   components: {
     AppHeader
@@ -25,15 +26,16 @@ function toggleColorMode() {
 <template>
   <header>
     <AppHeader />
-    <div class="wrapper">
-      <nav>
+  </header>
+    <!-- <div class="wrapper">
+      <nav> -->
         <button @click="toggleTheme">Toggle Theme</button>
-        <RouterLink to="/">Home</RouterLink>
+        <!-- <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div>
-  </header>
+    </div> -->
+
 
   <RouterView />
 </template>
