@@ -25,14 +25,14 @@ function toggleColorMode() {
 <template>
   <header>
     <AppHeader />
-    <!-- <div class="wrapper">
+    <div class="wrapper">
       <nav>
         <button @click="toggleTheme">Toggle Theme</button>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
       </nav>
-    </div> -->
+    </div>
   </header>
 
   <RouterView />

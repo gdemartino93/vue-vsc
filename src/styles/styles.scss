@@ -103,19 +103,25 @@ p {
 :root {
     --color-bg-code:white;
     --color-bg-side:#E5E5E5;
+    // questa è la barra dei comandi in alto
+    --hover-bg-bar: rgb(168, 161, 161);
     --color-text:#222;
+    
 }
   
 //   Variabili tema scuro
   [data-theme="dark"] {
     --color-bg-code:#272822;
     --color-bg-side:#272727;
+    // barra dei comandi in alto
+    --hover-bg-bar: rgb(82, 79, 79);
     --color-text:white;
   }
   
-  
-header{
+
+.cmd-bar{
     background-color: var(--color-bg-side);
     color: var(--color-text);
-    height: 5vh;
+    height: 40px;
+    // height: 5vh;
 }
