@@ -4,6 +4,6 @@
 
 <template>
   <main>
-About section
+questo sono io
   </main>
 </template>
