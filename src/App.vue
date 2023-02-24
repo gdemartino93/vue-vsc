@@ -1,3 +1,27 @@
+
+<script>
+import { RouterLink, RouterView } from 'vue-router';
+
+export default {
+  components: {
+
+  },
+  methods: {
+    toggleTheme() {
+      toggleColorMode();
+    }
+  }
+}
+
+function toggleColorMode() {
+  const defaultTheme = 'light';
+  const currentTheme = document.documentElement.getAttribute('data-theme') || defaultTheme;
+  const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', targetTheme);
+  localStorage.setItem('theme', targetTheme);
+}
+</script>
+
 <template>
   <header>
     <div class="wrapper">
@@ -13,28 +37,6 @@
   <RouterView />
 </template>
 
-<script>
-import { RouterLink, RouterView } from 'vue-router';
-
-export default {
-  components: {
-    RouterLink,
-    RouterView
-  },
-  methods: {
-    toggleTheme() {
-      toggleColorMode();
-    }
-  }
-}
-
-function toggleColorMode() {
-  const currentTheme = document.documentElement.getAttribute('data-theme');
-  const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
-  document.documentElement.setAttribute('data-theme', targetTheme);
-  localStorage.setItem('theme', targetTheme);
-}
-</script>
 
 <style scoped>
 

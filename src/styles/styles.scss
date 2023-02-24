@@ -101,27 +101,21 @@ p {
 }
 
 :root {
-    --dark-bg: #000;
-    --light-bg: #fff;
-    --text-color: #333;
-  }
+    --color-bg-code:white;
+    --color-bg-side:#E5E5E5;
+    --color-text:#222;
+}
   
-  /* Set values for the custom properties when the dark theme is active */
+//   Variabili tema scuro
   [data-theme="dark"] {
     --color-bg-code:#272822;
     --color-bg-side:#272727;
     --color-text:white;
   }
   
-  /* Set values for the custom properties when the light theme is active */
-  [data-theme="light"] {
-    --color-bg-code:white;
-    --color-bg-side:#E5E5E5;
-    --color-text:#222;
-  }
-
+  
 header{
     background-color: var(--color-bg-side);
     color: var(--color-text);
-    height: 10vh;
+    height: 5vh;
 }
