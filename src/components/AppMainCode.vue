@@ -1,19 +1,15 @@
 <script>
-export default {
-    setup () {
+    export default {
         
-
-        return {}
     }
-}
 </script>
 
+
 <template>
-    <div class="side-bar">
-        menu laterale
+    <div class="main-code">
+        main
     </div>
 </template>
-
 
 
 <style lang="scss" scoped>
