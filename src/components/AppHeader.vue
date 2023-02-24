@@ -13,8 +13,8 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 
 <template>
 
-    <div class="col-12 cmd-bar d-flex">
-        <div class="col-4 left-side">
+    <div class=" cmd-bar d-flex position-relative">
+        <div class="col-4 left-side flex-shrin-0">
             <ul class="d-flex gap-2 align-items-center">
                 <li><img :src="vscIcon" alt="Icona" ></li>
 
@@ -35,14 +35,16 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
             </ul>
         </div>
         
-        <div class="col-4 d-flex align-items-center">
+        <div class="d-flex justify-content-start col-5 align-items-center d-none d-md-block d-md-flex flex-shrink">
             <div class="input-group">
-              <input type="search" placeholder="What're you searching for?" aria-describedby="button-addon1" class="form-control border-0 search-bar">
+              <input type="text" placeholder="Gianluca De Martino - Jr Full Stack Web Developer" aria-describedby="button-addon1" class="form-control border-0 search-bar">
             </div>
         </div>
 
-        <div class="col-4">
-            
+        <div class="d-flex align-items-center justify-content-end gap-4 px-4 right-side">
+            <font-awesome-icon icon="fa-solid fa-minus" />
+            <font-awesome-icon icon="fa-regular fa-window-restore" />
+            <font-awesome-icon icon="fa-solid fa-xmark" />
         </div>
     </div>
 </template>
@@ -96,6 +98,7 @@ input.search-bar{
         background-color: var(--color-bg-search);
         color: var(--color-text);
         height: 30px;
+        width: 10px;
         &:focus{
             outline: none;
         }
@@ -104,6 +107,13 @@ input.search-bar{
     border: none;
     outline: none;
     box-shadow: none;
+}
+.right-side{
+    cursor: pointer;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translate(0,-50%);
 }
 
 </style>
