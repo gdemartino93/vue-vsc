@@ -1,15 +1,8 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-</script>
-
 <template>
   <header>
-
     <div class="wrapper">
       <nav>
-        <div class="prova">
-          <h1>asd</h1>
-        </div>
+        <button @click="toggleTheme">Toggle Theme</button>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/cv">CV</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -20,7 +13,29 @@ import { RouterLink, RouterView } from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped lang="scss">
-@import "@/styles/styles.scss"; // importa i file di mixin
+<script>
+import { RouterLink, RouterView } from 'vue-router';
+
+export default {
+  components: {
+    RouterLink,
+    RouterView
+  },
+  methods: {
+    toggleTheme() {
+      toggleColorMode();
+    }
+  }
+}
+
+function toggleColorMode() {
+  const currentTheme = document.documentElement.getAttribute('data-theme');
+  const targetTheme = currentTheme === 'light' ? 'dark' : 'light';
+  document.documentElement.setAttribute('data-theme', targetTheme);
+  localStorage.setItem('theme', targetTheme);
+}
+</script>
+
+<style scoped>
 
 </style>

@@ -1,12 +1,127 @@
-.light-mode{
-    --colo-bg-code:white;
-    --color-bg-side:#E5E5E5;
-    --color-text:#222;
-    --color-primaryu:#222,
+
+#app{
+    height: 100vh;
 }
-.dark-mode{
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* GLOBAL STYLE */
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+h1,
+h2,
+h3,
+h4 {
+  letter-spacing: var(--letter-spacing);
+  text-transform: capitalize;
+  line-height: 1.25;
+}
+h1 {
+  font-size: 3rem;
+}
+h2 {
+  font-size: 2rem;
+}
+h3 {
+  font-size: 1.25rem;
+}
+h4 {
+  font-size: 1.125rem;
+}
+p {
+  color: var(--grey-color);
+  font-size: 1rem;
+  letter-spacing: var(--letter-spacing);
+}
+@media screen and (min-width: 800px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 2.5rem;
+  }
+  h3 {
+    font-size: 1.75rem;
+  }
+  h4 {
+    font-size: 1rem;
+  }
+  body {
+    font-size: 1rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    line-height: 1;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  padding: 0.4rem 1.25rem;
+  border-radius: var(--btn-radius);
+  box-shadow: var(--light-shadow);
+  letter-spacing: var(--letter-spacing);
+  font-size: 0.55rem;
+  transition: var(--btn-transition);
+  cursor: pointer;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.icon {
+  padding: 0;
+  margin: 0;
+  font-size: 1rem;
+}
+
+:root {
+    --dark-bg: #000;
+    --light-bg: #fff;
+    --text-color: #333;
+  }
+  
+  /* Set values for the custom properties when the dark theme is active */
+  [data-theme="dark"] {
     --color-bg-code:#272822;
     --color-bg-side:#272727;
+    --color-text:white;
+  }
+  
+  /* Set values for the custom properties when the light theme is active */
+  [data-theme="light"] {
+    --color-bg-code:white;
+    --color-bg-side:#E5E5E5;
     --color-text:#222;
-    --color-primary:white;
+  }
+
+header{
+    background-color: var(--color-bg-side);
+    color: var(--color-text);
+    height: 10vh;
 }
