@@ -14,7 +14,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 <template>
 
     <div class=" cmd-bar d-flex position-relative">
-        <div class="col-4 left-side flex-shrin-0">
+        <div class="col-4 left-side min-h ">
             <ul class="d-flex gap-2 align-items-center">
                 <li><img :src="vscIcon" alt="Icona" ></li>
 
@@ -35,7 +35,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
             </ul>
         </div>
         
-        <div class="d-flex justify-content-start col-5 align-items-center d-none d-md-block d-md-flex flex-shrink">
+        <div class="d-flex justify-content-start col-5 align-items-center d-none d-md-block d-md-flex center-section">
             <div class="input-group">
               <input type="text" placeholder="Gianluca De Martino - Jr Full Stack Web Developer" aria-describedby="button-addon1" class="form-control border-0 search-bar">
             </div>
@@ -51,7 +51,9 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 
 
 <style lang="scss" scoped>
+
 .left-side{
+    
     .file-btn{
         color: var(--color-text);
         background-color: var(--color-bg-side);
@@ -66,7 +68,6 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
         margin-left: -20px;
     }
     ul{
-        // background-color: var(--color-bg-code);
         color: var(--color-text);
         li{
             cursor: pointer;
@@ -114,6 +115,12 @@ input.search-bar{
     right: 0;
     top: 50%;
     transform: translate(0,-50%);
+}
+
+@media (min-width: 1200px) {
+  .min-h {
+    min-width: 500px;
+  }
 }
 
 </style>
