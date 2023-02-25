@@ -40,10 +40,7 @@ export default {
 
 
 <template>
-    <div class="side-bar d-flex flex-column align-items-center py-3 gap-3">
-        <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgdemartino93">
-            <font-awesome-icon icon="fa-solid fa-star" class="starGitHub" />
-        </a>
+    <div class="side-bar d-flex flex-column align-items-center py-5 gap-3">
         <RouterLink to="/">
             <font-awesome-icon icon="fa-solid fa-house" />
         </RouterLink>
@@ -58,15 +55,16 @@ export default {
             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
             <font-awesome-icon icon="fa-solid fa-envelope" />
         </div>
-        <div class="dark-mode my-3">
+        <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgdemartino93">
+            <font-awesome-icon icon="fa-solid fa-star" class="starGitHub" />
+        </a>
+        <div class="dark-mode">
             <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema" v-if="temaIcona == 1" />
             <font-awesome-icon icon="fa-sol9id fa-lightbulb" @click="cambiaTema" v-else/>
         </div>
 
     </div>
 </template>
-
-
 
 <style lang="scss" scoped>
 .router-link-active {
@@ -79,7 +77,7 @@ export default {
     }
 }
 .starGitHub{
-    margin-bottom: 20px;
+   ma
     &:hover{
         color: yellow;
     }
