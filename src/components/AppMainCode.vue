@@ -3,16 +3,19 @@
     <article>
       <p class="typewriter fw-bold fs-2"></p>
       <ul class="menu"></ul>
+   
     </article> 
   </section>
 </template>
 
 <script>
 import Typewriter from 'typewriter-effect/dist/core';
-
+import {store} from '../store/store';
 export default {
   data() {
-    return {};
+    return {
+      store
+    };
   },
   mounted() {
     const target = document.querySelector('.typewriter');
@@ -27,16 +30,21 @@ export default {
       .pauseFor(400)
       .typeString("Sono Gianluca De Martino, <br> Web Developer. <br>")
       .deleteChars(15)
-      .typeString('Jr. Full Stack Web Developer. <br>')
-      .typeString('Qui di seguito le tecnologie conosciute:<br>')
-      .pauseFor(500) // Aggiungi una pausa prima di iniziare la scrittura di SkillScritte
-
-      .start();
+      .typeString('Jr. Full Stack Web Developer.')
+      .start()
+      .callFunction(() => {
+        store.scritturaTerminata = true; // setta scritturaTerminata a true quando la scrittura è terminata 
+      });
   }
 };
 </script>
 
 <style lang="scss" scoped>
+.box{
+  width: 200px;
+  height: 200px;
+  background-color: red;
+}
 .tag {
   color: blue;
 }

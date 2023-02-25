@@ -71,6 +71,7 @@ export const store = reactive({
         },
 
     ],
+    scritturaTerminata : false
     
     
 
