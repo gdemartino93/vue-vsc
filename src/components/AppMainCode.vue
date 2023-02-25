@@ -7,6 +7,20 @@
       <div class="image-home col-12  col-lg-6 d-flex mx-auto animate__animated animate__fadeIn my-4 my-lg-0" v-if="store.scritturaTerminata">
         <img :src="codeImg" alt="" class="img-fluid">
       </div>
+      <form v-if="store.scritturaTerminata" action="" netlify class="flex-column col-12 col-md-8 col-lg-6 animate__animated animate__fadeIn my-4 my-lg-0">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-success">Send</button>
+      </form>
+      <div>
+        
+      </div>
 
     </article> 
   </section>
@@ -28,7 +42,7 @@ export default {
 
     const typewriter = new Typewriter(target, {
       loop: false,
-      delay: 15
+      delay: 10
     });
 
     typewriter
@@ -74,7 +88,7 @@ p {
 
 .padding-lg {
   padding-top: 60px !important;
-  padding-left: 80px !important;
+  padding-left: 60px !important;
 }
 
 @media (min-width: 990px) {
