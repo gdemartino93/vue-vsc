@@ -4,6 +4,7 @@ import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap/dist/js/bootstrap.js'
 import './styles/styles.scss'
+import 'animate.css';
 
 
 /* import the fontawesome core */
