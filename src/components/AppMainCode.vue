@@ -1,6 +1,6 @@
 
 <script>
-
+import Typewriter from 'typewriter-effect/dist/core';
     export default {
       data(){
         return{
@@ -11,15 +11,33 @@
           Op : "<p>",
           Cp : "</p>",
         }
-      }
+      },
+      mounted() {
+    const target = document.querySelector('.typewriter');
+    const typewriter = new Typewriter(target, {
+      loop: false,
+      delay: 25
+    });
+    typewriter.typeString('<section>')
+      .typeString(this.OSect)
+      .pauseFor(500)
+      .typeString('<h2>Ciao Mondo! 👋🏻</h2>')
+      .pauseFor(500)
+      .typeString(` <p>Sono Gianluca e sono uno Jr. Full Stack Web Developer</p>`)
+      .start();
+  }
 
 }
 </script>
 
 
 <template>
-    <section class="main-code padding-lg">
-      <span class="tag">{{ OSect }}</span><br>
+    <section class="main-code padding-lg typewriter">
+       <div class="typewriter">
+        {{  }}
+       </div> 
+
+      <!-- <span class="tag">{{ OSect }}</span><br>
 
           &nbsp; <span class="tag">{{ Oh2 }}</span>
           <span class="fs-1 fw-bold">Ciao Mondo! 👋🏻</span>
@@ -33,7 +51,7 @@
 
 
 
-<br><span class="tag">{{ CSect }}</span>
+<br><span class="tag">{{ CSect }}</span> -->
     </section>
 </template>
 
