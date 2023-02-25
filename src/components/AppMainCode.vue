@@ -77,14 +77,14 @@ p {
   padding-left: 80px !important;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 990px) {
   .padding-lg {
     padding-top: 100px !important;
     padding-left: 300px !important;
   }
 }
 
-@media (min-width: 400px) {
+@media (min-width: 400px) and (max-width : 600px) {
   .padding-xs {
     padding-top: 60px !important;
     padding-left: 80px !important;
