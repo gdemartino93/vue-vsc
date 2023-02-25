@@ -1,6 +1,6 @@
 <script>
 import { store } from '../store/store';
-import vscIcon from "@/assets/icons/vsc-icon.svg";
+import vscIcon from "@/assets/vsc-icon.svg";
     export default {
         data(){
             return{

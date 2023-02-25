@@ -12,9 +12,10 @@ import { store } from '../store/store';
 </script>
 
 <template>
-    <RouterLink  v-for="tab in store.pages" :to=tab.path>
+    <RouterLink  v-for="tab in store.pages" :to=tab.path key="tab.id">
         <article class="tab">
-            <img :src="`../src/assets/icons/${tab.img}`" alt="">
+            <img :src="`/assets/${tab.img}`" :alt="tab.name">
+
             <span>{{ tab.name }}</span>
         </article>
     </RouterLink>

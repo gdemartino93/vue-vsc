@@ -17,7 +17,7 @@ import { store } from '../store/store';
             <span class="fw-bold">FILES</span>
             <RouterLink  v-for="page in store.pages" :to=page.path>
                 <li>
-                    <img :src="`../src/assets/icons/${page.img}`" alt="">
+                    <img :src="`/assets/${page.img}`" :alt="page.name">
                     <span>{{ page.name }}</span>
                 </li>
             </RouterLink>
