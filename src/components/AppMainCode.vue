@@ -1,85 +1,67 @@
+<template>
+  <section class="main-code padding-lg">
+    <article>
+      <p class="typewriter fw-bold fs-2"></p>
+      <ul class="menu"></ul>
+    </article> 
+  </section>
+</template>
 
 <script>
 import Typewriter from 'typewriter-effect/dist/core';
-    export default {
-      data(){
-        return{
-          OSect :"<section>",
-            CSect :"</section>",
-          Oh2 : "<h2>",
-          Ch2 : "</h2>",
-          Op : "<p>",
-          Cp : "</p>",
-        }
-      },
-      mounted() {
+
+export default {
+  data() {
+    return {};
+  },
+  mounted() {
     const target = document.querySelector('.typewriter');
+    const menu = document.querySelector('.menu');
+
     const typewriter = new Typewriter(target, {
       loop: false,
-      delay: 25
+      delay: 15
     });
-    typewriter.typeString('<section>')
-      .typeString(this.OSect)
-      .pauseFor(500)
-      .typeString('<h2>Ciao Mondo! 👋🏻</h2>')
-      .pauseFor(500)
-      .typeString(` <p>Sono Gianluca e sono uno Jr. Full Stack Web Developer</p>`)
+
+    typewriter
+      .typeString(`Ciao Mondo! 👋🏻 <br>`)
+      .pauseFor(400)
+      .typeString("Sono Gianluca De Martino, <br> Web Developer. <br>")
+      .deleteChars(15)
+      .typeString('Jr. Full Stack Web Developer. <br>')
+      .typeString('Qui di seguito le tecnologie conosciute:<br>')
+      .pauseFor(500) // Aggiungi una pausa prima di iniziare la scrittura di SkillScritte
+
       .start();
   }
-
-}
+};
 </script>
 
-
-<template>
-    <section class="main-code padding-lg typewriter">
-       <div class="typewriter">
-        {{  }}
-       </div> 
-
-      <!-- <span class="tag">{{ OSect }}</span><br>
-
-          &nbsp; <span class="tag">{{ Oh2 }}</span>
-          <span class="fs-1 fw-bold">Ciao Mondo! 👋🏻</span>
-          <span class="tag">{{ Ch2 }}</span> <br>
-
-          &nbsp <span class="tag">{{ Op }}</span>
-          <span class="">Sono <span class="fw-bold">Gianluca De Martino </span> - Jr. Full Stack Web Developer </span>
-          <span class="tag">{{ Cp }}</span> 
-
-
-
-
-
-<br><span class="tag">{{ CSect }}</span> -->
-    </section>
-</template>
-
-
 <style lang="scss" scoped>
-.tag{
+.tag {
   color: blue;
 }
-// resettare regole di default css
-p{
+
+p {
   margin: 0 !important;
 }
-.riga{
+
+.riga {
   display: flex;
   align-items: center;
 }
-.main-code{
+
+.main-code {
   background-color: var(--color-bg-code);
   color: var(--color-text);
   flex: 1;
   min-height: 100vh;
 }
+
 .padding-lg {
   padding-top: 60px !important;
   padding-left: 80px !important;
 }
-
-
 
 @media (min-width: 1200px) {
   .padding-lg {
@@ -87,6 +69,7 @@ p{
     padding-left: 300px !important;
   }
 }
+
 @media (min-width: 400px) {
   .padding-xs {
     padding-top: 60px !important;
