@@ -28,6 +28,9 @@ import { store } from '../store/store';
 
 
 <style lang="scss" scoped>
+.router-link-active {
+    font-weight: bold;
+}
 .expanded{
     width: 230px;
     background: var(--color-bg-aside-expanded);

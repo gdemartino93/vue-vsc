@@ -43,7 +43,7 @@ export const store = reactive({
             id : 1,
             name : 'Home',
             img : 'html-icon.svg',
-            path : '/home'
+            path : '/'
         },
         {
             id : 2,
