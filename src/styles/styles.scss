@@ -143,9 +143,13 @@ p {
   width: 50px;
   color: grey;
   font-size: 20px;
-  // &:hover{
-  //   color: white;
-  // }
+  a{
+    color: inherit;
+    // &:hover{
+    //   color: yellow;
+    // }
+  }
+  
 }
 .main-code{
   background-color: beige;
