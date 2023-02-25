@@ -91,7 +91,8 @@ p {
   }
 }
 .image-home{
-  width: 200px;
-  height: 200px;
+    img{
+      width: 400px;
+    }
 }
 </style>
