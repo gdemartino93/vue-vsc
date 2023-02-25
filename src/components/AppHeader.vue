@@ -29,7 +29,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
                 <div class="d-xl-none" >
                     <li class="dropdown-toggle file-btn" data-bs-toggle="dropdown" aria-expanded="false">File</li>
                     <ul class="dropdown-menu myDropDown">
-                        <li v-for="(menuOption,index) in menuOptions" :key="index"><span class="dropdown-item" href="#">{{ menuOption }}</span></li>
+                        <li v-for="(menuOption,index) in store.menuOptions" :key="index"><span class="dropdown-item" href="#">{{ menuOption.name }}</span></li>
                     </ul>
                 </div>
             </ul>
