@@ -8,7 +8,7 @@
 
 
 <template>
-    <section class="main-code padding-lg p-5">
+    <section class="main-code padding-lg">
         asdasdasdasd
         
             <h1>Ciao Mondo! 👋🏻 </h1>
@@ -32,17 +32,30 @@
 
 <style lang="scss" scoped>
 .main-code{
-  background-color: beige;
+  background-color: var(--color-bg-code);
+  color: var(--color-text);
   flex: 1;
 //   padding-top: 400px;
 //   padding-left: 300px;
   
 }
+.padding-lg {
+  padding-top: 60px !important;
+  padding-left: 80px !important;
+}
+
+
 
 @media (min-width: 1200px) {
   .padding-lg {
     padding-top: 100px !important;
     padding-left: 300px !important;
+  }
+}
+@media (min-width: 400px) {
+  .padding-xs {
+    padding-top: 60px !important;
+    padding-left: 80px !important;
   }
 }
 </style>
