@@ -106,6 +106,7 @@ p {
 
     // questa è la barra dei comandi in alto
     --hover-bg-bar: rgb(168, 161, 161);
+    --color-bg-topbar: #E5E5E5;
     --color-text:#222;
 
     // searchbar
@@ -124,6 +125,7 @@ p {
 
     // barra dei comandi in alto
     --hover-bg-bar: rgb(82, 79, 79);
+    --color-bg-topbar: #3E3E3F;
     --color-text:#CCCCCC;
 
     // searchbar
@@ -137,7 +139,7 @@ p {
   
 
 .cmd-bar{
-    background-color: var(--color-bg-side);
+    background-color: var(--color-bg-topbar);
     color: var(--color-text);
     height: 40px;
 }

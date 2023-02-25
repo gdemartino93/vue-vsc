@@ -4,13 +4,15 @@ import { RouterLink, RouterView } from 'vue-router';
 import AppHeader from './components/AppHeader.vue';
 import AppLeftSide from './components/AppLeftSide.vue';
 import AppLeftSideExpanded from './components/AppLeftSideExpanded.vue';
+import AppNavigation from './components/AppNavigation.vue';
 import AppMainCode from './components/AppMainCode.vue';
 export default {
   components: {
     AppHeader,
     AppLeftSide,
     AppMainCode,
-    AppLeftSideExpanded
+    AppLeftSideExpanded,
+    AppNavigation
 },
   methods: {
 
@@ -23,11 +25,13 @@ export default {
 <template>
   <header>
     <AppHeader />
+    <AppNavigation />
   </header>
   <main>
     <section class="d-flex">
       <AppLeftSide />
       <AppLeftSideExpanded />
+
       <RouterView />
 
     </section>

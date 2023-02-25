@@ -37,7 +37,7 @@ export const store = reactive({
                     name : "Help",
                     img : "vue-icon.svg"
                 },
-            ],
+    ],
     pages : [
         {
             id : 1,
@@ -70,7 +70,8 @@ export const store = reactive({
             path : '/cv'
         },
 
-    ]
+    ],
+    
     
 
 })
