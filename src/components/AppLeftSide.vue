@@ -1,35 +1,42 @@
 <script>
 export default {
-    data(){
-        return{
-            tema : "light",
-            temaRichiesto : "",
-            iconaTema : undefined,
-        }
+  data() {
+    return {
+      tema: "light",
+    };
+  },
+  methods: {
+    // controlliamo se esiste la chiave tema nello storage e ritorniamo il valore oppure ritorniamo light come valore predefinito per chi entra per la prima volta
+    recuperaStorage() {
+      if (localStorage.getItem("tema")) {
+        return localStorage.getItem("tema");
+      } else {
+        return "light";
+      }
     },
-    methods : {
-        toggleColorMode(){
-            // recuperiamo il tema selezionato
-            const temaCorrente = document.documentElement.getAttribute('data-theme');
-            // toggle del tema
-            // const temaRichiesto = temaCorrente === 'light' ? 'dark' : 'light';
-            if (temaCorrente === 'light'){
-                this.temaRichiesto = 'dark',
-                this.iconaTema = 0
-            }else{
-                this.temaRichiesto = 'light',
-                this.iconaTema = 1
-            }
-            document.documentElement.setAttribute('data-theme', this.temaRichiesto);
-            // salviamo nello storage il valore di tema 
-            localStorage.setItem('tema', this.temaRichiesto);
-        }
-    }
-}
+    // toggle tema
+    cambiaTema() {
+      if (localStorage.getItem("tema") === "light") {
+        localStorage.setItem("tema", "dark");
+      } else {
+        localStorage.setItem("tema", "light");
+      }
+    //   recuperiamo l'esito dell'if e settiamo il tema della pagina
+      this.tema = this.recuperaStorage();
+      document.documentElement.setAttribute("data-theme", this.tema);
+    },
+  },
+  mounted() {
+    // al mounted recuperiamo quello che abbiamo nello storage e settiamo il tema
+    this.tema = this.recuperaStorage();
+    document.documentElement.setAttribute("data-theme", this.tema);
+  },
+};
 </script>
 
+
 <template>
-    <div class="side-bar d-flex flex-column align-items-center py-3 gap-2">
+    <div class="side-bar d-flex flex-column align-items-center py-3 gap-3">
         <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgdemartino93">
             <font-awesome-icon icon="fa-solid fa-star" class="starGitHub" />
         </a>
@@ -42,14 +49,14 @@ export default {
         <RouterLink to="/cv">
             <font-awesome-icon icon="fa-solid fa-file" />
         </RouterLink>
-        <div class="social-contact d-flex flex-column gap-2 my-5 flex-grow-1">
+        <div class="social-contact d-flex flex-column gap-3 my-5 flex-grow-1">
             <font-awesome-icon icon="fa-brands fa-github" />
             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
             <font-awesome-icon icon="fa-solid fa-envelope" />
         </div>
         <div class="dark-mode my-3"> 
-            <font-awesome-icon icon="fa-solid fa-moon" @click="toggleColorMode()" v-if="temaRichiesto == 'light'"/>
-            <font-awesome-icon icon="fa-solid fa-lightbulb" @click="toggleColorMode()" v-else />
+            <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema" />
+            <font-awesome-icon icon="fa-solid fa-lightbulb" />
         </div>
 
     </div>
