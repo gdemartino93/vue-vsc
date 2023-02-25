@@ -23,7 +23,7 @@ export default {
 </script>
 
 <template>
-  <header>
+  <header class="fixed-top">
     <AppHeader />
     <AppNavigation />
   </header>
