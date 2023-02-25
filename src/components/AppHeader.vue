@@ -1,10 +1,11 @@
 <script>
+import { store } from '../store/store';
 import vscIcon from "@/assets/icons/vsc-icon.svg";
     export default {
         data(){
             return{
+                store,
                 vscIcon: vscIcon,
-                menuOptions : ["Edit","Selection","View","Go","Run","Terminal","Help"]
             }
         }
         
@@ -12,7 +13,6 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
 </script>
 
 <template>
-
     <div class=" cmd-bar d-flex position-relative">
         <div class="col-4 left-side min-h ">
             <ul class="d-flex gap-2 align-items-center">
@@ -21,8 +21,8 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
                 <!-- menu non dropdown mostrato al brekpoint xl -->
                 <div class="gap-2 align-items-center d-none d-xl-block d-xl-flex">  
                     <li class="file-btn">File</li>
-                    <li v-for="menuOption in menuOptions">
-                        <span>{{ menuOption }}</span>
+                    <li v-for="menuOption in store.menuOptions">
+                        <span>{{ menuOption.name }}</span>
                     </li>
                 </div>
                 <!-- menu dropdown nascosto al breakpoint xl  -->
