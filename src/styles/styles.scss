@@ -113,6 +113,8 @@ p {
     
     // aside
     --color-bg-aside:#2C2C2C;
+    // area expanded aside
+    --color-bg-aside-expanded: #F3F3F3;
 }
   
 //   Variabili tema scuro
@@ -122,13 +124,15 @@ p {
 
     // barra dei comandi in alto
     --hover-bg-bar: rgb(82, 79, 79);
-    --color-text:white;
+    --color-text:#CCCCCC;
 
     // searchbar
     --color-bg-search:#484849;
 
     // aside
     --color-bg-aside : #353535;
+    // area expanded aside
+    --color-bg-aside-expanded: #272727;
   }
   
 

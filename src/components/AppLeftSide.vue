@@ -2,7 +2,9 @@
 export default {
   data() {
     return {
-      tema: "light",
+      tema: "",
+    //   dato che usiamo per gestire l'icona
+      temaIcona: undefined,
     };
   },
   methods: {
@@ -18,8 +20,10 @@ export default {
     cambiaTema() {
       if (localStorage.getItem("tema") === "light") {
         localStorage.setItem("tema", "dark");
+        this.temaIcona = 0;
       } else {
         localStorage.setItem("tema", "light");
+        this.temaIcona = 1;
       }
     //   recuperiamo l'esito dell'if e settiamo il tema della pagina
       this.tema = this.recuperaStorage();
@@ -54,9 +58,9 @@ export default {
             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
             <font-awesome-icon icon="fa-solid fa-envelope" />
         </div>
-        <div class="dark-mode my-3"> 
-            <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema" />
-            <font-awesome-icon icon="fa-solid fa-lightbulb" />
+        <div class="dark-mode my-3">
+            <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema"  />
+            <!-- <font-awesome-icon icon="fa-sol9id fa-lightbulb" @click="cambiaTema"/> -->
         </div>
 
     </div>
