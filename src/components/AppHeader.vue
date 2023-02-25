@@ -19,7 +19,7 @@ import vscIcon from "@/assets/icons/vsc-icon.svg";
                 <li><img :src="vscIcon" alt="Icona" ></li>
 
                 <!-- menu non dropdown mostrato al brekpoint xl -->
-                <div class="gap-2 align-items-center d-none d-xl-block d-xl-flex">  
+                <div class="align-items-center d-none d-xl-block d-xl-flex">  
                     <li class="file-btn">File</li>
                     <li v-for="menuOption in store.menuOptions">
                         <span>{{ menuOption.name }}</span>
