@@ -16,7 +16,6 @@ export default {
   },
   mounted() {
     const target = document.querySelector('.typewriter');
-    const menu = document.querySelector('.menu');
 
     const typewriter = new Typewriter(target, {
       loop: false,

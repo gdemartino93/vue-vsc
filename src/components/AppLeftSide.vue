@@ -59,8 +59,8 @@ export default {
             <font-awesome-icon icon="fa-solid fa-envelope" />
         </div>
         <div class="dark-mode my-3">
-            <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema"  />
-            <!-- <font-awesome-icon icon="fa-sol9id fa-lightbulb" @click="cambiaTema"/> -->
+            <font-awesome-icon icon="fa-solid fa-moon" @click="cambiaTema" v-if="temaIcona == 1" />
+            <font-awesome-icon icon="fa-sol9id fa-lightbulb" @click="cambiaTema" v-else/>
         </div>
 
     </div>
