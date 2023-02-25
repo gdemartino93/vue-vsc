@@ -19,7 +19,7 @@ import Tab from './Tab.vue';
 <style lang="scss" scoped>
 .navigation-bar{
     width: calc(100% - 280px);
-    height: 50px;
+    height: 40px;
     background:var(--color-bg-aside-expanded);
     flex: 1;
     position: absolute;

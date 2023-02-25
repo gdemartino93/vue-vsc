@@ -30,6 +30,7 @@ import { store } from '../store/store';
 .tab{
     padding: 4px 30px;
     background: var(--color-bg-tab);
+    color: var(--color-text-tab);
     height: 100%;
     display: flex;
     align-items: center;
