@@ -1,12 +1,16 @@
 <script>
+import Tab from './Tab.vue';
     export default {
+        components : {
+            Tab
+        }
         
     }
 </script>
 
 <template>
-    <div class="navigation-bar">
-
+    <div class="navigation-bar d-flex align-items-center">
+        <Tab />
     </div>
 </template>
 
@@ -20,5 +24,6 @@
     flex: 1;
     position: absolute;
     right: 0;
+    gap: 10px;
 }
 </style>

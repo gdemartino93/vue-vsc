@@ -116,6 +116,9 @@ p {
     --color-bg-aside:#2C2C2C;
     // area expanded aside
     --color-bg-aside-expanded: #F3F3F3;
+
+    // tab
+    --color-bg-tab : #ECECEC;
 }
   
 //   Variabili tema scuro
@@ -135,6 +138,8 @@ p {
     --color-bg-aside : #353535;
     // area expanded aside
     --color-bg-aside-expanded: #272727;
+
+    // --color-bg-tab
   }
   
 
@@ -151,13 +156,13 @@ p {
   font-size: 20px;
   a{
     color: inherit;
-    // &:hover{
-    //   color: yellow;
-    // }
   }
   
 }
 .main-code{
   background-color: beige;
   flex: 1;
+  padding-top: 50px;
+  padding-left: 50px;
+  
 }
