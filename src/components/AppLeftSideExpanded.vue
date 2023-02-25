@@ -11,7 +11,7 @@ import { store } from '../store/store';
     }
 </script>
 <template>
-    <section class="expanded">
+    <section class="expanded d-none d-lg-block">
         <h4 class="p-3">EXPLORER</h4>
         <ul class="d-flex flex-column gap-1">
             <span class="fw-bold">FILES</span>
@@ -35,6 +35,11 @@ import { store } from '../store/store';
     width: 230px;
     background: var(--color-bg-aside-expanded);
     color: var(--color-text);
+    margin-left: 50px;
+    position: fixed;
+    left:0;
+    bottom: 0;
+    height: 100%;
 }
 li{
     display: flex;

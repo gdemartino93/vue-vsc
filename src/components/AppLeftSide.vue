@@ -66,7 +66,7 @@ export default {
     </div>
 </template>
 
-<font-awesome-icon icon="fa-solid fa-file" />
+
 
 <style lang="scss" scoped>
 .router-link-active {

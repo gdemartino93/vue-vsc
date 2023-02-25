@@ -146,27 +146,27 @@ p {
     --color-text-tab : #E1C08C;
   }
   
-
 .cmd-bar{
     background-color: var(--color-bg-topbar);
     color: var(--color-text);
     height: 40px;
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
 }
 .side-bar{
-  background-color: var(--color-bg-aside) ;
-  height: calc(100vh - 40px);
+  background-color: var(--color-bg-aside);
+   flex: 0 0 50px;
+  height: 100vh;
+  position: fixed;
   width: 50px;
+  left: 0;
+  top: 0;
   color: grey;
   font-size: 20px;
   a{
     color: inherit;
   }
-  
-}
-.main-code{
-  background-color: beige;
-  flex: 1;
-  padding-top: 50px;
-  padding-left: 50px;
   
 }
