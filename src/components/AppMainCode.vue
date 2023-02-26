@@ -4,10 +4,10 @@
       <div class="col-12 col-lg-6">
         <p class="typewriter fw-bold fs-2"></p>
       </div>
-      <div class="image-home col-12  col-lg-6 d-flex mx-auto animate__animated animate__fadeIn my-4 my-lg-0" v-if="store.scritturaTerminata">
+      <div class="image-home col-12 col-lg-6 d-flex mx-auto animate__animated animate__fadeIn my-4 my-lg-0" v-if="store.scritturaTerminata && isMounted">
         <img :src="codeImg" alt="developer-coding" class="mx-auto">
       </div>
-      <Form />
+      <Form v-if="store.scritturaTerminata && isMounted" />
       <div>     
       </div>
     </article> 
@@ -23,12 +23,16 @@ import Form from './Form.vue';
 export default {
   components :{
     Form,
-},
+  },
   data() {
     return {
       store,
-      codeImg : codeImg
+      codeImg : codeImg,
+      isMounted: false 
     };
+  },
+  created() {
+    // inizializza il componente
   },
   mounted() {
     const target = document.querySelector('.typewriter');
@@ -47,6 +51,7 @@ export default {
       .start()
       .callFunction(() => {
         store.scritturaTerminata = true; // setta scritturaTerminata a true quando la scrittura è terminata 
+        this.isMounted = true; // setta isMounted a true quando il componente è stato montato
       });
   }
 };
