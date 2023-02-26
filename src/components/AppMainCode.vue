@@ -7,28 +7,25 @@
       <div class="image-home col-12  col-lg-6 d-flex mx-auto animate__animated animate__fadeIn my-4 my-lg-0" v-if="store.scritturaTerminata">
         <img :src="codeImg" alt="" class="img-fluid">
       </div>
-      <form accept-charset="UTF-8" action="https://www.formbackend.com/f/94a607a0d38bcb96" method="POST">
-            <!-- Name input -->
+      <Form />
+      <!-- <form accept-charset="UTF-8" action="https://www.formbackend.com/f/94a607a0d38bcb96" method="POST">
             <div class="form-outline mb-4">
               <input type="text" id="form4Example1" class="form-control" name="email"/>
               <label class="form-label" for="form4Example1">Name</label>
             </div>
 
-            <!-- Email input -->
             <div class="form-outline mb-4">
               <input type="email" id="form4Example2" class="form-control" name="email"/>
               <label class="form-label" for="form4Example2">Email address</label>
             </div>
 
-            <!-- Message input -->
             <div class="form-outline mb-4">
               <textarea class="form-control" id="form4Example3" rows="4"></textarea>
               <label class="form-label" for="form4Example3">Message</label>
             </div>
 
-            <!-- Submit button -->
             <button type="submit" class="btn btn-primary btn-block mb-4">Send</button>
-    </form>
+    </form> -->
       <!-- <form v-if="store.scritturaTerminata" action="" method="POST" name="contact" class="flex-column col-12 col-md-8 col-lg-6 animate__animated animate__fadeIn my-4 my-lg-0" netlify>
         <div class="mb-3">
           <label for="exampleFormControlInput1" class="form-label">Email address</label>
@@ -49,10 +46,15 @@
 </template>
 
 <script>
+
 import Typewriter from 'typewriter-effect/dist/core';
 import {store} from '../store/store';
 import codeImg from "@/assets/homepage.svg";
+import Form from './Form.vue';
 export default {
+  components :{
+    Form,
+},
   data() {
     return {
       store,
