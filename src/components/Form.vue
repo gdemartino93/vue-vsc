@@ -1,11 +1,6 @@
    <template>
-    <section class="col-10 col-md-8 col-lg-10 mx-auto d-flex flex-column gap-5 animate__animated animate__fadeIn" @submit.prevent="sendMail" v-if="store.scritturaTerminata">
+    <section class="" @submit.prevent="sendMail" >
       <div class="form-container">
-        <h3 class="fw-bold fs-3 mb-4 tag">.Contattami {</h3>
-
-        <p class="testo">Se hai domande o suggerimenti non esitare a contattarmi compilando il seguente form.</p>
-
-        <span class="fw-bold fs-3">}</span>
 
         <form class="col-12 d-flex flex-column gap-3 mt-4" ref="myForm">
           <div class="form-group">
