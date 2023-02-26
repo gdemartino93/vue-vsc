@@ -4,16 +4,16 @@
         <h3 class="text-center fw-bold">Contattami:</h3>
         <form class="col-12 d-flex flex-column gap-3" ref="myForm">
           <div class="form-group">
-            <input name="from_name" placeholder="Inserisci il tuo nome" type="text" v-model="from_name" class="form-control" v-bind:required="true">
+            <input name="from_name" placeholder="Inserisci il tuo nome" type="text" v-model="from_name" class="form-control input-contact" v-bind:required="true">
           </div>
           <div class="form-group">
-            <input name="email" placeholder="Inserisci la tua email" type="email" v-model="email" class="form-control" v-bind:required="true">
+            <input name="email" placeholder="Inserisci la tua email" type="email" v-model="email" class="form-control input-contact" v-bind:required="true">
           </div>
           <div class="form-group">
-            <input name="subject" placeholder="Oggetto" type="text" v-model="subject" class="form-control" v-bind:required="true">
+            <input name="subject" placeholder="Oggetto" type="text" v-model="subject" class="form-control input-contact" v-bind:required="true">
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" placeholder="Scrivi il tuo messaggio" type="text" v-model="message" v-bind:required="true"></textarea>
+            <textarea class="form-control input-contact" name="message" placeholder="Scrivi il tuo messaggio" type="text" v-model="message" v-bind:required="true" id="msg"></textarea>
           </div>
           <div class="form-group">
             <input class="btn btn-success" type="submit" name="send" />
@@ -55,4 +55,11 @@
   }
   </script>
   <style lang="scss" scoped>
+  .input-contact{
+    background: var(--color-bg-aside-expanded);
+    &:focus{
+      background-color: var(--color-bg-aside-expanded);
+      color:  var(--color-text);
+    }
+  }
   </style>
