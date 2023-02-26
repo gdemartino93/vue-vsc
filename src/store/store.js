@@ -75,23 +75,81 @@ export const store = reactive({
         skills: {
           frontEnd: [
             {
-              name: 'Css',
-              img: 'asdasd'
+              id : 1,  
+              name: 'Html',
+              img: 'html-icon.svg'
             },
             {
-              name: 'Html',
-              img: 'asdasdasd'
-            }
+                id : 2,            
+                name: 'CSS',
+                img: 'css-icon.svg'
+            },
+            {
+                id : 3,
+                name: 'Javascript',
+                img: 'js-icon.svg'
+              },
+              {
+                id : 4,
+                name: 'React.js',
+                img: 'react-icon.svg'
+              },
+              {
+                id : 5,
+                name: 'Vue.js',
+                img: 'vue-icon.svg'
+              },
+              {
+                id : 6,
+                name: 'Sass',
+                img: 'sass-icon.svg'
+              },
+              {
+                id : 7,
+                name: 'Bootstrap',
+                img: 'bootstrap-icon.svg'
+              },
           ],
           backEnd: [
             {
-              name: 'php',
-              img: 'php img'
+                id : 1,
+                name: 'php',
+                img: 'php-icon.svg'
             },
             {
-              name: 'mySql',
-              img: 'sqlimg'
+                id : 2,
+                name: 'MySql',
+                img: 'mysql-icon.svg'
+            },
+            {
+                id : 3,
+                name: 'Laravel',
+                img: 'laravel-icon.svg'
+            },
+            {
+                id : 4,
+                name: 'Java',
+                img: 'java-icon.svg'
+            },
+          ],
+          strumentiUtilizzati: [
+            {
+                id : 1,
+                name : 'Windows',
+                img : 'windows-icon.svg'
+            },
+            {
+                id : 2,
+                name : 'Visual Studio Code',
+                img  : 'vsc-icon.svg'
+
+            },
+            {
+                id : 3,
+                name : 'Postman',
+                img  : 'post-icon.svg'
             }
+
           ]
         }
       },
