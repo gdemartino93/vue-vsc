@@ -76,6 +76,7 @@ export default {
 }
 .form-text{
     padding-left: 110px;
+    color: var(--color-text);
 }
 
 

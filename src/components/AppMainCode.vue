@@ -45,9 +45,7 @@ export default {
       isMounted: false 
     };
   },
-  created() {
-    // inizializza il componente
-  },
+ 
   mounted() {
     const target = document.querySelector('.typewriter');
 
