@@ -2,19 +2,19 @@
   <section class="main-code padding-lg">
     <article class="col-12 d-flex flex-wrap">
       <div class="col-12 col-lg-12">
-        <p class="typewriter fw-bold fs-3"></p>
+        <p class="typewriter fw-bold fs-3">
+          <!-- qui scrive il testo typewrite -->
+        </p>
       </div>
       <!-- visibile -->
       <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
-        <h3 class="text-center fw-bold fs-3 mb-4">Qualcosa su di me:</h3>
-        <p class="">Mi chiamo Gianluca De Martino ed ho 29 anni. <br>
-          La passione per l'informatica è nata quando ero ancora bambino. Infatti, nonostante la mia giovane età, ho un ricordo nitido del modem 56k e del relativo suono, ma anche dell'icona di Internet Explorer che doveva completare il giro del mondo per caricare la pagina.  <br>
-          Mi piace programmare e rimanere sempre aggiornato su nuove tecnologie e qualcosa l'ho finalmente imparata, credo...🤷‍♂️ <br>
-          Ogni volta che posso, mi diverto a sperimentare con le librerie e i framework più moderni di JavaScript, come React.js e Vue.js, ma non mi dispiace anche sperimentare con Laravel. <br>
-          Inoltre sono orgolioso di dire che ho creato questo sito portfolio da zero ed oltre ad essere un modo per mettere in pratica le mie abilità spero che possa anche dimostrare le mie competenze e soprattutto la mia passione per questo mondo. <br>
-          Il mio obiettivo è continuare a crescere come sviluppatore e contribuire alla realizzazione ed al mantenimento di progetti innovativi. <br>
-          Buona navigazione.
+        <h3 class=" fw-bold fs-3 mb-4"> .Benvenuto {</h3>
+        <p class="testo">Benvenuti nel mio sito! <br>
+           Sono Gianluca De Martino, uno sviluppatore web appassionato di tecnologia e informatica. <br>
+           Qui potrete trovare informazioni su di me, i miei progetti e le mie competenze nel mondo della programmazione. <br>
+           Sfogliate il mio portfolio e buona navigazione.
         </p>
+        <span class="fw-bold fs-3">}</span>
       </div>
       <Form class="contact-form" v-if="store.scritturaTerminata && isMounted" />
 
@@ -51,7 +51,7 @@ export default {
     typewriter
       .typeString(`Ciao Mondo! 👋🏻 <br>`)
       .pauseFor(400)
-      .typeString("Sono Gianluca De Martino, <br> Web Developer. <br>")
+      .typeString("Sono Gianluca, <br> Web Developer. <br>")
       .deleteChars(15)
       .typeString('Jr. Full Stack Web Developer.')
       .start()
@@ -64,7 +64,13 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+*{
+  letter-spacing: 1px;
+}
+.testo{
+  line-height: 40px;
+  padding-left: 50px;
+}
 .tag {
   color: blue;
 }
