@@ -48,13 +48,13 @@ export const store = reactive({
         {
             id : 2,
             name : 'About',
-            img : 'css-icon.svg',
+            img : 'vue-icon.svg',
             path : '/about'
         },
         {
             id : 3,
             name : 'Contacts',
-            img : 'js-icon.svg',
+            img : 'sass-icon.svg',
             path : '/contacts'
         },
         {

@@ -120,6 +120,9 @@ h4 {
 
     // tab
     --color-bg-tab : #ECECEC;
+
+    // codice pagina css
+    --color-text-tag : #80005D;
 }
   
 //   Variabili tema scuro
@@ -144,7 +147,11 @@ h4 {
     // --color-bg-tab
     --color-bg-tab : #404040;
     --color-text-tab : #E1C08C;
+
+      // codice pagina css
+      --color-text-tag : #9872A2;
   }
+
   
 .cmd-bar{
     background-color: var(--color-bg-topbar);
