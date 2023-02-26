@@ -1,19 +1,19 @@
-<template>
-    <section class="col-10 col-md-8 col-lg-6 mx-auto d-flex flex-column gap-5">
+   <template>
+    <section class="col-10 col-md-8 col-lg-6 mx-auto d-flex flex-column gap-5 animate__animated animate__fadeIn" @submit.prevent="sendMail" v-if="store.scritturaTerminata">
       <div class="form-container">
-        <p class="my-2">Contattami:</p>
-        <form class=" col-12 d-flex flex-column gap-3"  @submit.prevent="sendMail" ref="myForm">
+        <h3 class="text-center fw-bold">Contattami:</h3>
+        <form class="col-12 d-flex flex-column gap-3" ref="myForm">
           <div class="form-group">
-            <input name="from_name" placeholder="Inserisci il tuo nome" type="text" :value="inputFieldReset" class="form-control" required>
+            <input name="from_name" placeholder="Inserisci il tuo nome" type="text" v-model="from_name" class="form-control" v-bind:required="true">
           </div>
           <div class="form-group">
-            <input name="email" placeholder="Inserisci la tua email" type="email" :value="inputFieldReset" class="form-control" required>
+            <input name="email" placeholder="Inserisci la tua email" type="email" v-model="email" class="form-control" v-bind:required="true">
           </div>
           <div class="form-group">
-            <input name="subject" placeholder="Oggetto" type="text" :value="inputFieldReset" class="form-control" required>
+            <input name="subject" placeholder="Oggetto" type="text" v-model="subject" class="form-control" v-bind:required="true">
           </div>
           <div class="form-group">
-            <textarea class="form-control" name="message" placeholder="Scrivi il tuo messaggio" type="text" :value="inputFieldReset" required></textarea>
+            <textarea class="form-control" name="message" placeholder="Scrivi il tuo messaggio" type="text" v-model="message" v-bind:required="true"></textarea>
           </div>
           <div class="form-group">
             <input class="btn btn-success" type="submit" name="send" />
@@ -22,34 +22,37 @@
       </div>
     </section>
   </template>
-  
   <script>
+  import { store } from '../store/store';
   import emailjs from 'emailjs-com';
-  import { ref } from 'vue';
   
   export default {
-    setup() {
-      const myForm = ref(null);
-      const inputFieldReset = ref(null);
-  
-      const sendMail = () => {
+    data() {
+      return {
+        store,
+        from_name: '',
+        email: '',
+        subject: '',
+        message: '',
+      }
+    },
+    methods: {
+      sendMail() {
         emailjs
-          .sendForm('service_lbok7ri', 'template_3f71fuy', myForm.value, 't8h9c8YN5mcCudxCH')
+          .sendForm('service_lbok7ri', 'template_3f71fuy', this.$refs.myForm, 't8h9c8YN5mcCudxCH')
           .then(() => {
             alert('Messaggio Inviato!');
-            inputFieldReset.value = '';
+            this.from_name = '';
+            this.email = '';
+            this.subject = '';
+            this.message = '';
           })
           .catch((error) => {
-            alert('Message not sent. Error:', error);
+            alert('Messaggio non inviato. Errore:', error);
           });
-      };
-  
-      return {
-        sendMail,
-        myForm,
-        inputFieldReset,
-      };
-    },
-  };
+      }
+    }
+  }
   </script>
-  
+  <style lang="scss" scoped>
+  </style>
