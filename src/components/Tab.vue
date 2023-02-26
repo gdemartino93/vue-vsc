@@ -7,6 +7,9 @@ import { store } from '../store/store';
                 store,
 
             }
+        },
+        methods:{
+
         }
     }
 </script>

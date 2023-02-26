@@ -71,6 +71,30 @@ export const store = reactive({
         },
 
     ],
+    skills : {
+        skills: {
+          frontEnd: [
+            {
+              name: 'Css',
+              img: 'asdasd'
+            },
+            {
+              name: 'Html',
+              img: 'asdasdasd'
+            }
+          ],
+          backEnd: [
+            {
+              name: 'php',
+              img: 'php img'
+            },
+            {
+              name: 'mySql',
+              img: 'sqlimg'
+            }
+          ]
+        }
+      },
     scritturaTerminata : false
     
     

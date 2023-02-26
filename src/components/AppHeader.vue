@@ -1,11 +1,11 @@
 <script>
 import { store } from '../store/store';
-import vscIcon from "@/assets/vsc-icon.svg";
+
     export default {
         data(){
             return{
                 store,
-                vscIcon: vscIcon,
+                
             }
         }
         
@@ -16,8 +16,7 @@ import vscIcon from "@/assets/vsc-icon.svg";
     <div class=" cmd-bar d-flex position-relative">
         <div class="col-4 left-side min-h ">
             <ul class="d-flex gap-2 align-items-center">
-                <li><img :src="vscIcon" alt="Icona" ></li>
-
+                <li><img src="/assets/vsc-icon.svg" :alt="icon"></li>
                 <!-- menu non dropdown mostrato al brekpoint xl -->
                 <div class="align-items-center d-none d-xl-block d-xl-flex">  
                     <li class="file-btn">File</li>
