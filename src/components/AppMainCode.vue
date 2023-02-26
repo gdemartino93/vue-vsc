@@ -1,15 +1,23 @@
 <template>
   <section class="main-code padding-lg">
     <article class="col-12 d-flex flex-wrap">
-      <div class="col-12 col-lg-6">
-        <p class="typewriter fw-bold fs-2"></p>
+      <div class="col-12 col-lg-12">
+        <p class="typewriter fw-bold fs-3"></p>
       </div>
-      <div class="image-home col-12 col-lg-6 d-flex mx-auto animate__animated animate__fadeIn my-4 my-lg-0" v-if="store.scritturaTerminata && isMounted">
-        <img :src="codeImg" alt="developer-coding" class="mx-auto">
+      <!-- visibile -->
+      <div class="col-12 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
+        <h3 class="text-center fw-bold fs-3 mb-4">Qualcosa su di me:</h3>
+        <p class="">Mi chiamo Gianluca De Martino ed ho 29 anni. <br>
+          La passione per l'informatica è nata quando ero ancora bambino. Infatti, nonostante la mia giovane età, ho un ricordo nitido del modem 56k e del relativo suono, ma anche dell'icona di Internet Explorer che doveva completare il giro del mondo per caricare la pagina.  <br>
+          Mi piace programmare e rimanere sempre aggiornato su nuove tecnologie e qualcosa l'ho finalmente imparata, credo...🤷‍♂️ <br>
+          Ogni volta che posso, mi diverto a sperimentare con le librerie e i framework più moderni di JavaScript, come React.js e Vue.js, ma non mi dispiace anche sperimentare con Laravel. <br>
+          Inoltre sono orgolioso di dire che ho creato questo sito portfolio da zero ed oltre ad essere un modo per mettere in pratica le mie abilità spero che possa anche dimostrare le mie competenze e soprattutto la mia passione per questo mondo. <br>
+          Il mio obiettivo è continuare a crescere come sviluppatore e contribuire alla realizzazione ed al mantenimento di progetti innovativi. <br>
+          Buona navigazione.
+        </p>
       </div>
-      <Form v-if="store.scritturaTerminata && isMounted" />
-      <div>     
-      </div>
+      <Form class="contact-form" v-if="store.scritturaTerminata && isMounted" />
+
     </article> 
   </section>
 </template>
@@ -18,7 +26,6 @@
 
 import Typewriter from 'typewriter-effect/dist/core';
 import {store} from '../store/store';
-import codeImg from "@/assets/homepage.svg";
 import Form from './Form.vue';
 export default {
   components :{
@@ -27,7 +34,6 @@ export default {
   data() {
     return {
       store,
-      codeImg : codeImg,
       isMounted: false 
     };
   },
@@ -39,7 +45,7 @@ export default {
 
     const typewriter = new Typewriter(target, {
       loop: false,
-      delay: 10
+      delay: 0
     });
 
     typewriter
@@ -98,11 +104,7 @@ p {
     padding-left: 80px !important;
   }
 }
-.image-home{
-  
-    img{
-      height: auto;
-      width: 300px;
-    }
+.contact-form{
+  padding-bottom: 70px;
 }
 </style>
