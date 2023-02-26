@@ -3,7 +3,8 @@ import HomeView from '../views/HomeView.vue';
 import CV from '../views/pages/CV.vue';
 import About from '../views/pages/About.vue';
 import Contacts from '../views/pages/Contacts.vue';
-import Home from '../components/AppMainCode.vue'
+import Home from '../components/AppMainCode.vue';
+import Projects from '../views/pages/Projects.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -22,6 +23,11 @@ const router = createRouter({
       path: '/contacts',
       name: 'contacts',
       component: Contacts
+    },
+        {
+      path: '/projects',
+      name: 'projects',
+      component: Projects
     },
     {
       path: '/cv',
