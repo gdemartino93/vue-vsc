@@ -36,7 +36,7 @@ export default {
       <!-- fine parte testo -->
       <!-- sezione frontend -->
       <div class="col-10 col-md-8 col-lg-10 d-flex flex-column mx-auto">
-        <h3 class="text-center mb-4 fw-bold fs-2">Tecnologie Front-End</h3>
+        <h3 class="text-center mb-4 fw-bold fs-2 mt-3">Tecnologie Front-End</h3>
           <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5">
 
             <div v-for="skillFront in skill.frontEnd" class="box col-3 justify-content-center align-items-center">
