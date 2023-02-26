@@ -52,7 +52,7 @@ export default {
           </div>
           <!-- sezione strumenti utilizzati -->
           <h3 class="text-center my-4 fw-bold fs-2">Strumenti che utilizzo</h3>
-          <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5">
+          <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5 mb-5">
             <div v-for="strumenti in skill.strumentiUtilizzati"  class="box col-3 justify-content-center align-items-center">
                 <img :src="`/assets/${strumenti.img}`" :alt="strumenti.name">
             </div>
