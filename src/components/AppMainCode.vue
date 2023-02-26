@@ -5,7 +5,7 @@
         <p class="typewriter fw-bold fs-3"></p>
       </div>
       <!-- visibile -->
-      <div class="col-12 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
+      <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
         <h3 class="text-center fw-bold fs-3 mb-4">Qualcosa su di me:</h3>
         <p class="">Mi chiamo Gianluca De Martino ed ho 29 anni. <br>
           La passione per l'informatica è nata quando ero ancora bambino. Infatti, nonostante la mia giovane età, ho un ricordo nitido del modem 56k e del relativo suono, ma anche dell'icona di Internet Explorer che doveva completare il giro del mondo per caricare la pagina.  <br>

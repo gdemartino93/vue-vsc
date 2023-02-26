@@ -1,7 +1,8 @@
    <template>
-    <section class="col-10 col-md-8 col-lg-6 mx-auto d-flex flex-column gap-5 animate__animated animate__fadeIn" @submit.prevent="sendMail" v-if="store.scritturaTerminata">
+    <section class="col-10 col-md-8 col-lg-10 mx-auto d-flex flex-column gap-5 animate__animated animate__fadeIn" @submit.prevent="sendMail" v-if="store.scritturaTerminata">
       <div class="form-container">
-        <h3 class="text-center fw-bold">Contattami:</h3>
+        <h3 class="text-center fw-bold mb-4">Contattami:</h3>
+        <p class="mb-4">Se hai domande, suggerimenti o sei interessato ad una collaborazione, non esitare a contattarmi compilando il seguente form.</p>
         <form class="col-12 d-flex flex-column gap-3" ref="myForm">
           <div class="form-group">
             <input name="from_name" placeholder="Inserisci il tuo nome" type="text" v-model="from_name" class="form-control input-contact" v-bind:required="true">
