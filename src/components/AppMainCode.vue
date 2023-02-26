@@ -8,15 +8,23 @@
       </div>
       <!-- visibile -->
       <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
-        <h3 class=" fw-bold fs-3 mb-4"> .Benvenuto {</h3>
+
+        <span class="fw-bold fs-3"> &lt;Benvenuto&gt;</span>
         <p class="testo">Benvenuti nel mio sito! <br>
            Sono Gianluca De Martino, uno sviluppatore web appassionato di tecnologia e informatica. <br>
            Qui potrete trovare informazioni su di me, i miei progetti e le mie competenze nel mondo della programmazione. <br>
            Sfogliate il mio portfolio e buona navigazione.
         </p>
-        <span class="fw-bold fs-3">}</span>
+        <span class="fw-bold fs-3"> &lt;/Benvenuto&gt;</span>
+        <span class="fw-bold fs-3 mt-4"> &lt;Contattami&gt;</span>
+        <p class="testo">Se hai domande o suggerimenti non esitare a contattarmi compilando il seguente form.</p>
+        <span class="fw-bold fs-3"> &lt;/Contattami&gt;</span>
+        <span class="fw-bold fs-3 mt-4"> &lt;Form&gt;</span>
+
+        <Form class="contact-form" v-if="store.scritturaTerminata && isMounted" />
+        <span class="fw-bold fs-3"> &lt;/Form&gt;</span>
       </div>
-      <Form class="contact-form" v-if="store.scritturaTerminata && isMounted" />
+
 
     </article> 
   </section>
@@ -72,7 +80,7 @@ export default {
   padding-left: 50px;
 }
 .tag {
-  color: blue;
+  color: var(--color-text-tag);
 }
 
 p {
@@ -111,6 +119,6 @@ p {
   }
 }
 .contact-form{
-  padding-bottom: 70px;
+  padding-bottom: 20px;
 }
 </style>
