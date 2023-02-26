@@ -15,7 +15,6 @@ import { store } from '../store/store';
     <RouterLink  v-for="tab in store.pages" :to=tab.path key="tab.id">
         <article class="tab">
             <img :src="`/assets/${tab.img}`" :alt="tab.name">
-
             <span>{{ tab.name }}</span>
         </article>
     </RouterLink>
@@ -25,7 +24,9 @@ import { store } from '../store/store';
 <style lang="scss" scoped>
 .router-link-active {
     font-weight: bold;
-    background-color: red;
+   .tab{
+    background: var(--color-bg-code);
+   }
    
 }
 .tab{

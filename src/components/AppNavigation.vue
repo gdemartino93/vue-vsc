@@ -23,6 +23,6 @@ import Tab from './Tab.vue';
     background:var(--color-bg-aside-expanded);
     position: absolute;
     right: 0;
-    gap: 10px;
+
 }
 </style>
