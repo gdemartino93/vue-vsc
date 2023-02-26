@@ -86,7 +86,7 @@ export default {
 @media (min-width: 990px) {
   .padding-lg {
     padding-top: 100px !important;
-    padding-left: 300px !important;
+    padding-left: 250px !important;
   }
 }
 

@@ -26,7 +26,7 @@ export default {
 <template>
   <section class="main-code padding-lg">
     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto">
-        <h3 class="text-center fw-bold fs-3 mb-4">Parlo di me:</h3>
+        <h3 class="text-center fw-bold fs-3 mb-4">Contattami</h3>
         <article>
             <span class="tag fw-bold fs-3">
                 .contatti{ <br>
@@ -95,7 +95,7 @@ export default {
 @media (min-width: 990px) {
   .padding-lg {
     padding-top: 100px !important;
-    padding-left: 300px !important;
+    padding-left: 250px !important;
   }
 }
 
