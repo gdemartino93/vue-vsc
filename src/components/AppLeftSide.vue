@@ -45,15 +45,32 @@ export default {
             <font-awesome-icon icon="fa-solid fa-house" />
         </RouterLink>
         <RouterLink to="/about">
-            <font-awesome-icon icon="fa-solid fa-address-card" />
+            <font-awesome-icon icon="fa-solid fa-user" />
+        </RouterLink>
+        <RouterLink to="/contacts">
+          <font-awesome-icon icon="fa-solid fa-address-card" />
+        </RouterLink>
+        <RouterLink to="/projects">
+          <font-awesome-icon icon="fa-solid fa-desktop" />
         </RouterLink>
         <RouterLink to="/cv">
             <font-awesome-icon icon="fa-solid fa-file" />
         </RouterLink>
+
+
+
+
         <div class="social-contact d-flex flex-column gap-3 my-5 flex-grow-1">
+          <a href="https://github.com/gdemartino93">
             <font-awesome-icon icon="fa-brands fa-github" />
+          </a>
+          <a href="https://www.linkedin.com/in/gianluca-demartino/">
             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
+          </a>
+          <a href="mailto:g.demartino9393@gmail.com">
             <font-awesome-icon icon="fa-solid fa-envelope" />
+          </a>
+
         </div>
         <a href="https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fgdemartino93">
             <font-awesome-icon icon="fa-solid fa-star" class="starGitHub" />
