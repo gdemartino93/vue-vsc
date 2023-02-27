@@ -36,7 +36,7 @@ import { store } from '../store/store';
         
         <div class="d-flex justify-content-start col-5 align-items-center d-none d-md-block d-md-flex center-section">
             <div class="input-group">
-              <input type="text" placeholder="Gianluca De Martino - Jr Full Stack Web Developer" aria-describedby="button-addon1" class="form-control border-0 search-bar">
+              <input type="text" disabled placeholder="Gianluca De Martino - Jr Full Stack Web Developer" aria-describedby="button-addon1" class="form-control border-0 search-bar">
             </div>
         </div>
 
