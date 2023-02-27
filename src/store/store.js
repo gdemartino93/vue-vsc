@@ -299,14 +299,14 @@ export const store = reactive({
             this.tabAperte.push(tabCliccata)
         }
     },
-    closeTab(id){
-        // prendiamo la tab cliccata
-        let tabCliccata = this.pages.find(tab => tab.id === id);
-        // elimiamo la tab cliccata dall'array delle tab aperte
-        this.tabAperte.splice(tabCliccata,1);
-        console.log("ciao")
-        
-    }
+    closeTab(id) {
+        // trovare l'indice della tab cliccata nell'array delle tab aperte
+        const index = this.tabAperte.findIndex(tab => tab.id === id);
+        // eliminare la tab cliccata dall'array delle tab aperte
+        if (index !== -1) {
+          this.tabAperte.splice(index, 1);
+        }
+      }
     
     
 
