@@ -156,58 +156,95 @@ export const store = reactive({
     projects : [
         {
             id : 1,
-            nome : 'Prova',
-            descrizione : 'descrizione',
-            img : 'gelateria.png',
-        },
-        {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
+            nome : 'DC Comics',
+            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
             img : 'bankcard.png',
+            linkRepo : 'www.google.it',
+            livePreview : 'www.google.it',
+            tecnologieUsate : [
+                {
+                    nome : "vue3",
+                    img : "vue-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
         },
         {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
+            id : 1,
+            nome : 'DC Comics',
+            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
+            img : 'bankcard.png',
+            linkRepo : 'www.google.it',
+            livePreview : 'www.google.it',
+            tecnologieUsate : [
+                {
+                    nome : "vue3",
+                    img : "vue-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
         },
         {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
+            id : 1,
+            nome : 'DC Comics',
+            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
+            img : 'bankcard.png',
+            linkRepo : 'www.google.it',
+            livePreview : 'www.google.it',
+            tecnologieUsate : [
+                {
+                    nome : "vue3",
+                    img : "vue-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
         },
         {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
+            id : 1,
+            nome : 'DC Comics',
+            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
+            img : 'bankcard.png',
+            linkRepo : 'www.google.it',
+            livePreview : 'www.google.it',
+            tecnologieUsate : [
+                {
+                    nome : "vue3",
+                    img : "vue-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
         },
         {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
+            id : 1,
+            nome : 'DC Comics',
+            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
+            img : 'bankcard.png',
+            linkRepo : 'www.google.it',
+            livePreview : 'www.google.it',
+            tecnologieUsate : [
+                {
+                    nome : "vue3",
+                    img : "vue-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
         },
-        {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
-        },
-        {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
-        },
-        {
-            id : 2,
-            nome : 'Prova2',
-            descrizione : 'descrizione 2',
-            img : 'asdasdas',
-        },
+        
 
     ]
       ,
