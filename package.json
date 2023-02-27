@@ -20,7 +20,8 @@
     "netlify-cli": "^13.0.0",
     "typewriter-effect": "^2.19.0",
     "vue": "^3.2.47",
-    "vue-router": "^4.1.6"
+    "vue-router": "^4.1.6",
+    "vue-spinner": "^1.0.4"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.0.0",
