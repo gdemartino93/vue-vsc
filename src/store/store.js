@@ -280,10 +280,13 @@ export const store = reactive({
         
         
 
-    ]
-      ,
+    ],
+    tabAperte: [ ] ,
     scritturaTerminata : false,
     cvCaricato : false,
+    saluta(){
+        console.log("ciao prova")
+    }
     
     
 

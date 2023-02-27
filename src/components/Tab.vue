@@ -9,7 +9,7 @@ import { store } from '../store/store';
             }
         },
         methods:{
-
+            
         }
     }
 </script>
@@ -17,8 +17,9 @@ import { store } from '../store/store';
 <template>
     <RouterLink  v-for="tab in store.pages" :to=tab.path key="tab.id">
         <article class="tab">
-            <img :src="`/assets/${tab.img}`" :alt="tab.name">
+            <img :src="`/assets/${tab.img}`" :alt="tab.name"  >
             <span>{{ tab.name }}</span>
+            <span> X</span>
         </article>
     </RouterLink>
 </template>
