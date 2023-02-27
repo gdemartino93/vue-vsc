@@ -30,14 +30,10 @@ export const store = reactive({
     },
     {
       id: 6,
-      name: "Terminal",
-      img: "vue-icon.svg",
-    },
-    {
-      id: 7,
       name: "Help",
       img: "vue-icon.svg",
     },
+
   ],
   pages: [
     // {
@@ -296,7 +292,7 @@ export const store = reactive({
   async closeTab(id) {
     // trovare l'indice della tab cliccata nell'array delle tab aperte
     const index = this.tabAperte.findIndex((tab) => tab.id === id);
-
+    // gestisci il push delle rotte quando chiudi il tab
     if (router.currentRoute.value.path === this.tabAperte[index]?.path) {
       await router.push(
         this.tabAperte[index + 1]?.path ||

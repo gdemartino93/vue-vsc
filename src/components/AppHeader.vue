@@ -16,7 +16,7 @@ export default {
       <ul class="d-flex gap-2 align-items-center">
         <li><img src="/assets/vsc-icon.svg" :alt="icon" /></li>
         <!-- menu non dropdown mostrato al brekpoint xl -->
-        <div class="align-items-center d-none d-xl-block d-xl-flex">
+        <div class="align-items-center d-none d-xl-block d-xl-flex gap-2">
           <li class="file-btn">File</li>
           <li v-for="(menuOption, index) in store.menuOptions" :key="index">
             <span>{{ menuOption.name }}</span>
