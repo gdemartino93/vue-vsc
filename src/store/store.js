@@ -281,11 +281,31 @@ export const store = reactive({
         
 
     ],
-    tabAperte: [ ] ,
+    tabAperte: [
+        {
+            id : 1,
+            name : 'Home',
+            img : 'html-icon.svg',
+            path : '/'
+        },
+    ] ,
     scritturaTerminata : false,
     cvCaricato : false,
-    saluta(){
-        console.log("ciao prova")
+    apriTab(id){
+        // prendiamo la tab cliccata
+        let tabCliccata = this.pages.find(tab => id === tab.id);
+        // controlliamo che non sia presente prima di pushare
+        if (!this.tabAperte.includes(tabCliccata)){
+            this.tabAperte.push(tabCliccata)
+        }
+    },
+    closeTab(id){
+        // prendiamo la tab cliccata
+        let tabCliccata = this.pages.find(tab => tab.id === id);
+        // elimiamo la tab cliccata dall'array delle tab aperte
+        this.tabAperte.splice(tabCliccata,1);
+        console.log("ciao")
+        
     }
     
     

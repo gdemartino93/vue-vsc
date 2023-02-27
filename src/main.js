@@ -22,7 +22,7 @@ import { faWindowRestore } from '@fortawesome/free-regular-svg-icons'
 import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons'
 
 /* add icons to the library */
-library.add(faUserSecret,faMinus,faWindowRestore,faXmark,faHouse,faAddressCard,faFile,faMoon,faLightbulb,faLinkedinIn,faGithub,faEnvelope,faStar,faUser,faDesktop)
+library.add(faUserSecret,faMinus,faWindowRestore,faXmark,faHouse,faAddressCard,faFile,faMoon,faLightbulb,faLinkedinIn,faGithub,faEnvelope,faStar,faUser,faDesktop,faXmark)
 
 const app = createApp(App)
 

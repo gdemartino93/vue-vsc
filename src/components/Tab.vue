@@ -15,17 +15,23 @@ import { store } from '../store/store';
 </script>
 
 <template>
-    <RouterLink  v-for="tab in store.pages" :to=tab.path key="tab.id">
-        <article class="tab">
+    <RouterLink  v-for="tab in store.tabAperte" :to=tab.path key="tab.id">
+        <article class="tab d-flex align-items-center">
             <img :src="`/assets/${tab.img}`" :alt="tab.name"  >
             <span>{{ tab.name }}</span>
-            <span> X</span>
+                <span  class="delete">
+                    <font-awesome-icon @click="store.closeTab(tab.id)" icon="fa-solid fa-xmark" />
+                </span>
         </article>
     </RouterLink>
 </template>
 
 
 <style lang="scss" scoped>
+.delete{
+    position: absolute;
+    right: 5px;
+}
 .router-link-active {
     font-weight: bold;
    .tab{
@@ -40,6 +46,7 @@ import { store } from '../store/store';
     height: 100%;
     display: flex;
     align-items: center;
+    position: relative;
     img{
         width: 20px;
         height: 20px;

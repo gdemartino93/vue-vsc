@@ -15,7 +15,7 @@ import { store } from '../store/store';
         <h4 class="p-3">EXPLORER</h4>
         <ul class="d-flex flex-column gap-1">
             <span class="fw-bold">FILES</span>
-            <RouterLink  v-for="page in store.pages" :to=page.path>
+            <RouterLink @click="store.apriTab(page.id)" v-for="page in store.pages" :to=page.path>
                 <li>
                     <img :src="`/assets/${page.img}`" :alt="page.name">
                     <span>{{ page.name }}</span>
