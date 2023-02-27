@@ -18,14 +18,14 @@ import { store } from "../store/store";
     }
 </script>
 <template>
-    <MDBCard class="col-12 col-md-4 col-lg-3 project">
+    <MDBCard class="col-11 col-md-4 col-lg-3 project">
         <MDBCardImg top :src="`/assets/${project.img}`" alt="..."/>
         <MDBCardBody>
-            <MDBCardTitle>{{ project.nome }}</MDBCardTitle>
+            <MDBCardTitle class="fw-bold">{{ project.nome }}</MDBCardTitle>
             <MDBCardText>
                 {{ project.descrizione }}
             </MDBCardText>
-            <span class="fw-bold">Cosa è stato usato:</span>
+            <span class="fw-bold">Come è stato creato:</span>
             <ul>
                 <li v-for="tecnologia in project.tecnologieUsate" class="tecnologieUsate">
                     <img :src="`assets/${tecnologia.img}`" :alt="tecnologia.nome">
@@ -36,8 +36,8 @@ import { store } from "../store/store";
 
         <MDBCardBody class="d-flex justify-content-between">
         
-        <a :href="project.linkRepo">Demo Github</a>
-        <a href="www.google.it">Live Preview</a>
+        <a :href="project.linkRepo" target="_blank">Link Github</a>
+        <a :href="project.livePreview" target="_blank">Live Preview</a>
 
         <!-- <MDBCardLink :href="project.linkRepo">Card link</MDBCardLink>
         <MDBCardLink href="#">Another link</MDBCardLink> -->

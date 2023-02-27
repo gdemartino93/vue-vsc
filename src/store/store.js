@@ -156,15 +156,19 @@ export const store = reactive({
     projects : [
         {
             id : 1,
-            nome : 'DC Comics',
-            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
-            img : 'bankcard.png',
-            linkRepo : 'www.google.it',
-            livePreview : 'www.google.it',
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
             tecnologieUsate : [
                 {
-                    nome : "vue3",
-                    img : "vue-icon.svg"
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
                 },
                 {
                     nome : "Javascript",
@@ -174,15 +178,19 @@ export const store = reactive({
         },
         {
             id : 1,
-            nome : 'DC Comics',
-            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
-            img : 'bankcard.png',
-            linkRepo : 'www.google.it',
-            livePreview : 'www.google.it',
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
             tecnologieUsate : [
                 {
-                    nome : "vue3",
-                    img : "vue-icon.svg"
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
                 },
                 {
                     nome : "Javascript",
@@ -192,15 +200,19 @@ export const store = reactive({
         },
         {
             id : 1,
-            nome : 'DC Comics',
-            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
-            img : 'bankcard.png',
-            linkRepo : 'www.google.it',
-            livePreview : 'www.google.it',
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
             tecnologieUsate : [
                 {
-                    nome : "vue3",
-                    img : "vue-icon.svg"
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
                 },
                 {
                     nome : "Javascript",
@@ -210,15 +222,19 @@ export const store = reactive({
         },
         {
             id : 1,
-            nome : 'DC Comics',
-            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
-            img : 'bankcard.png',
-            linkRepo : 'www.google.it',
-            livePreview : 'www.google.it',
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
             tecnologieUsate : [
                 {
-                    nome : "vue3",
-                    img : "vue-icon.svg"
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
                 },
                 {
                     nome : "Javascript",
@@ -228,15 +244,41 @@ export const store = reactive({
         },
         {
             id : 1,
-            nome : 'DC Comics',
-            descrizione : 'Questo sito web è creato creato usando Vue3 sulla base di una vecchia versione del sito web della casa editrice statunitense specializzata nella pubblicazione di fumetti. I contenuti vengono importati automaticamente tramite chiamata API gestita con Axios',
-            img : 'bankcard.png',
-            linkRepo : 'www.google.it',
-            livePreview : 'www.google.it',
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
             tecnologieUsate : [
                 {
-                    nome : "vue3",
-                    img : "vue-icon.svg"
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
+                },
+                {
+                    nome : "Javascript",
+                    img : "js-icon.svg"
+                },
+            ]
+        },
+        {
+            id : 1,
+            nome : "Bank Card Interactive",
+            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            img : "bankcard.png",
+            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
+            livePreview : "https://famous-churros-ba683e.netlify.app/",
+            tecnologieUsate : [
+                {
+                    nome : "Html",
+                    img : "html-icon.svg"
+                },
+                {
+                    nome : "CSS",
+                    img : "css-icon.svg"
                 },
                 {
                     nome : "Javascript",
