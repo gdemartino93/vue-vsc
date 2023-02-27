@@ -24,8 +24,6 @@
         <Form class="contact-form col-10 col-md-8 col-lg-10 mx-auto d-flex flex-column gap-5 animate__animated animate__fadeIn " v-if="store.scritturaTerminata && isMounted" />
         <span class="fw-bold fs-3"> &lt;/Form&gt;</span>
       </div>
-
-
     </article> 
   </section>
 </template>

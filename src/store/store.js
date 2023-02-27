@@ -39,32 +39,32 @@ export const store = reactive({
                 },
     ],
     pages : [
+        // {
+        //     id : 1,
+        //     name : 'Home',
+        //     img : 'html-icon.svg',
+        //     path : '/'
+        // },
         {
             id : 1,
-            name : 'Home',
-            img : 'html-icon.svg',
-            path : '/'
-        },
-        {
-            id : 2,
             name : 'About',
             img : 'vue-icon.svg',
             path : '/about'
         },
         {
-            id : 3,
+            id : 2,
             name : 'Contacts',
             img : 'sass-icon.svg',
             path : '/contacts'
         },
         {
-            id : 4,
+            id : 3,
             name : 'Projects',
             img : 'js-icon.svg',
             path : '/projects'
         },
         {
-            id : 5,
+            id : 4,
             name : 'Cv',
             img : 'json-icon.svg',
             path : '/cv'
@@ -282,12 +282,7 @@ export const store = reactive({
 
     ],
     tabAperte: [
-        {
-            id : 1,
-            name : 'Home',
-            img : 'html-icon.svg',
-            path : '/'
-        },
+        // array che riempiremo con le tab aperte
     ] ,
     scritturaTerminata : false,
     cvCaricato : false,

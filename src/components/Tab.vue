@@ -15,7 +15,15 @@ import { store } from '../store/store';
 </script>
 
 <template>
-    <RouterLink  v-for="tab in store.tabAperte" :to=tab.path key="tab.id">
+    <RouterLink to="/">
+    <article class="tab d-flex align-items-center">
+            <img src="/assets/html-icon.svg" alt="home-icon"  >
+            <span>Home</span>
+
+        </article>
+    </RouterLink>
+    <div class="d-flex" v-for="tab in store.tabAperte">
+        <RouterLink   :to=tab.path key="tab.id">
         <article class="tab d-flex align-items-center">
             <img :src="`/assets/${tab.img}`" :alt="tab.name"  >
             <span>{{ tab.name }}</span>
@@ -23,7 +31,10 @@ import { store } from '../store/store';
                     <font-awesome-icon @click="store.closeTab(tab.id)" icon="fa-solid fa-xmark" />
                 </span>
         </article>
-    </RouterLink>
+        </RouterLink>
+
+    </div>
+
 </template>
 
 
