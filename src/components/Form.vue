@@ -64,6 +64,7 @@
   }
   .input-contact{
     background: var(--color-bg-aside-expanded);
+    color: var(--color-text);
     &:focus{
       background-color: var(--color-bg-aside-expanded);
       color:  var(--color-text);
