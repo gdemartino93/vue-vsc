@@ -61,10 +61,10 @@ export default {
 
 
         <div class="social-contact d-flex flex-column gap-3 my-5 flex-grow-1">
-          <a href="https://github.com/gdemartino93">
+          <a href="https://github.com/gdemartino93" target="_blank">
             <font-awesome-icon icon="fa-brands fa-github" />
           </a>
-          <a href="https://www.linkedin.com/in/gianluca-demartino/">
+          <a href="https://www.linkedin.com/in/gianluca-demartino/" target="_blank">
             <font-awesome-icon icon="fa-brands fa-linkedin-in" />
           </a>
           <a href="mailto:g.demartino9393@gmail.com">
