@@ -99,6 +99,12 @@ export default {
 .box{
   display: flex;
   justify-content: centers;
+  border: 1px solid cornflowerblue;
+  height: 100px;
+  &:hover{
+    box-shadow: 5px 5px cadetblue;
+    scale: 1.2;
+  }
   img{
     width: 25%;
   }
