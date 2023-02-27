@@ -177,12 +177,12 @@ export const store = reactive({
             ]
         },
         {
-            id : 1,
-            nome : "Bank Card Interactive",
-            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            id : 2,
+            nome : "Spotify",
+            descrizione : "Questo sito web è stato creato con Vue3 e vengono importate le cover tramite chiamate API. E' stata aggiunta qualche feature per divertimento",
             img : "bankcard.png",
-            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
-            livePreview : "https://famous-churros-ba683e.netlify.app/",
+            linkRepo : "https://github.com/gdemartino93/spotify-Vue3js",
+            livePreview : "https://jazzy-beijinho-d0844d.netlify.app/",
             tecnologieUsate : [
                 {
                     nome : "Html",
@@ -195,16 +195,20 @@ export const store = reactive({
                 {
                     nome : "Javascript",
                     img : "js-icon.svg"
+                },
+                {
+                    nome : "Vue3.js",
+                    img : "vue-icon.svg"
                 },
             ]
         },
         {
-            id : 1,
-            nome : "Bank Card Interactive",
-            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            id : 3,
+            nome : "Darkmode React ",
+            descrizione : "Questo sito è figlio delle mie esercitazioni con gli Hooks di React, infatti viene usato l'useEffect per cambiare la classe al tag html ogni volta che cambia il valore di 'theme'. Per cambiare l'icona all'interno del tasto mi servo dell'useState per tenere traccia di 'isDark' e cambiare l'icona tramite l'operatore ternario. N.b.: Gli articoli e i titolo sono stati scritti da ChatGPT (Lorem Ipsum RIP.) ",
             img : "bankcard.png",
-            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
-            livePreview : "https://famous-churros-ba683e.netlify.app/",
+            linkRepo : "https://github.com/gdemartino93/react-dark-mode",
+            livePreview : "https://fascinating-kitsune-0f90e0.netlify.app/",
             tecnologieUsate : [
                 {
                     nome : "Html",
@@ -217,16 +221,20 @@ export const store = reactive({
                 {
                     nome : "Javascript",
                     img : "js-icon.svg"
+                },
+                {
+                    nome : "React.js",
+                    img : "react-icon.svg"
                 },
             ]
         },
         {
-            id : 1,
-            nome : "Bank Card Interactive",
-            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            id : 4,
+            nome : "Rick And Morty ",
+            descrizione : "Questo sito è stato creato per fare pratica con le chiamate API, infatti in base alla selezione fa una chiamata API differente.",
             img : "bankcard.png",
-            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
-            livePreview : "https://famous-churros-ba683e.netlify.app/",
+            linkRepo : "https://github.com/gdemartino93/vite-breaking-bad",
+            livePreview : "https://tubular-gingersnap-cdea29.netlify.app/",
             tecnologieUsate : [
                 {
                     nome : "Html",
@@ -239,16 +247,20 @@ export const store = reactive({
                 {
                     nome : "Javascript",
                     img : "js-icon.svg"
+                },
+                {
+                    nome : "Vue3.js",
+                    img : "vue-icon.svg"
                 },
             ]
         },
         {
-            id : 1,
-            nome : "Bank Card Interactive",
-            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+            id : 5,
+            nome : "Whatsapp Replica ",
+            descrizione : "Ho sviluppato una replica della famosa applicazione di messaggistica istantanea con alcune features in javascript. Infatti avremo la risposta random del computer(no AI), possibilità di filtrare i contatti nell'input cerca, cambio di stato con 'Sta Scrivendo...' e 'Online', possibilitò di pickare l'emoticon da una tabella di emoticon, possibilità di eliminare i messaggi ",
             img : "bankcard.png",
-            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
-            livePreview : "https://famous-churros-ba683e.netlify.app/",
+            linkRepo : "https://github.com/gdemartino93/vue-boolzapp",
+            livePreview : "https://gdemartino93.github.io/vue-boolzapp/",
             tecnologieUsate : [
                 {
                     nome : "Html",
@@ -262,30 +274,10 @@ export const store = reactive({
                     nome : "Javascript",
                     img : "js-icon.svg"
                 },
+
             ]
         },
-        {
-            id : 1,
-            nome : "Bank Card Interactive",
-            descrizione : "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
-            img : "bankcard.png",
-            linkRepo : "https://github.com/gdemartino93/interactive-card-bank",
-            livePreview : "https://famous-churros-ba683e.netlify.app/",
-            tecnologieUsate : [
-                {
-                    nome : "Html",
-                    img : "html-icon.svg"
-                },
-                {
-                    nome : "CSS",
-                    img : "css-icon.svg"
-                },
-                {
-                    nome : "Javascript",
-                    img : "js-icon.svg"
-                },
-            ]
-        },
+        
         
 
     ]

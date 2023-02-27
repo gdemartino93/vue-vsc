@@ -34,7 +34,7 @@ import { store } from "../store/store";
             </ul>
         </MDBCardBody>
 
-        <MDBCardBody class="d-flex justify-content-between">
+        <MDBCardBody class="d-flex justify-content-between align-items-end">
         
         <a :href="project.linkRepo" target="_blank">Link Github</a>
         <a :href="project.livePreview" target="_blank">Live Preview</a>
