@@ -211,7 +211,8 @@ export const store = reactive({
 
     ]
       ,
-    scritturaTerminata : false
+    scritturaTerminata : false,
+    cvCaricato : false,
     
     
 

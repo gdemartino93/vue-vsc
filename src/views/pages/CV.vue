@@ -1,38 +1,9 @@
-<script>
-import { store } from '../../store/store';
-import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
-export default {
-  components : {
-    PulseLoader
-  },
-
-  data() {
-    return {
-      store,
-      isLoaded : true,
-
-    };
-  },
-  methods :{
-
-  
-  },
-
-  mounted() {
-    setTimeout(() => {
-  this.isLoaded = false;
-}, 2000)
-
-  }
-};
-</script>
-
 <template>
-
   <section class="main-code padding-lg  text-center">
-    <div v-if="isLoaded" class="loader"> <PulseLoader /></div>
+    <div v-if="!store.cvCaricato" class="loader">
+      <PulseLoader />
+    </div>
     <div v-else>
-
       <h3 class="text-center fw-bold fs-3 mb-4">CV</h3>
       <a href="/assets/cv.pdf" class="btn btn-primary mb-4" download>Scarica il mio CV</a>
       <div class="col-10 mx-auto ">
@@ -40,9 +11,28 @@ export default {
       </div>
       <a href="/assets/cv.pdf" class="btn btn-primary my-5" download>Scarica il mio CV</a>
     </div>
-
   </section>
 </template>
+
+<script>
+import { store } from '../../store/store';
+import PulseLoader from 'vue-spinner/src/PulseLoader.vue'
+export default {
+  components : {
+    PulseLoader
+  },
+  data() {
+    return {
+      store
+    };
+  },
+  mounted() {
+    setTimeout(() => {
+      store.cvCaricato = true;
+    }, 2000)
+  }
+};
+</script>
 
 
 <style lang="scss" scoped>
