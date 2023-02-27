@@ -153,6 +153,64 @@ export const store = reactive({
           ]
         }
       },
+    projects : [
+        {
+            id : 1,
+            nome : 'Prova',
+            descrizione : 'descrizione',
+            img : 'gelateria.png',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'bankcard.png',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+        {
+            id : 2,
+            nome : 'Prova2',
+            descrizione : 'descrizione 2',
+            img : 'asdasdas',
+        },
+
+    ]
+      ,
     scritturaTerminata : false
     
     
