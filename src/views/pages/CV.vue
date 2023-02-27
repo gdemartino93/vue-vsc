@@ -21,7 +21,7 @@ export default {
   mounted() {
     setTimeout(() => {
   this.isLoaded = false;
-}, 3000)
+}, 2000)
 
   }
 };
@@ -64,13 +64,13 @@ export default {
 
 .padding-lg {
   padding-top: 60px !important;
-  padding-left: 60px !important;
+  padding-left: 50px !important;
 }
 
 @media (min-width: 990px) {
   .padding-lg {
     padding-top: 100px !important;
-    padding-left: 250px !important;
+    padding-left: 150px !important;
   }
 }
 
