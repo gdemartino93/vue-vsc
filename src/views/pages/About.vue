@@ -106,7 +106,7 @@ export default {
     scale: 1.2;
   }
   img{
-    width: 25%;
+    width: 3rem;
   }
 }
 
