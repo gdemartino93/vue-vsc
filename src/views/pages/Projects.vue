@@ -26,13 +26,9 @@ export default {
 <template>
   <section class="main-code padding-lg">
       <h3 class="text-center fw-bold fs-3 mb-4">Progetti</h3>
-      <div class="col-10 col-md-8 col-lg-10 d-flex justify-content-around flex-wrap gap-5 mx-auto">
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
-      <Project />
+      <div class="col-12 d-flex justify-content-around flex-wrap gap-3 mx-auto ">
+      <Project v-for="project in store.projects" :project="project" />
+
       </div>
   </section>
 </template>
