@@ -18,7 +18,7 @@ import Tab from './Tab.vue';
 
 <style lang="scss" scoped>
 .navigation-bar{
-    width: calc(100% - 280px);
+    width: calc(100% - 250px);
     height: 40px;
     background:var(--color-bg-aside-expanded);
     position: absolute;

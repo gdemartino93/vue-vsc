@@ -32,7 +32,7 @@ import { store } from '../store/store';
     font-weight: bold;
 }
 .expanded{
-    width: 230px;
+    width: 200px;
     background: var(--color-bg-aside-expanded);
     color: var(--color-text);
     margin-left: 50px;
