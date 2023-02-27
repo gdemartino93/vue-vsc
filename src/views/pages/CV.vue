@@ -21,7 +21,7 @@ export default {
   mounted() {
     setTimeout(() => {
   this.isLoaded = false;
-}, 4000)
+}, 3000)
 
   }
 };
@@ -29,12 +29,12 @@ export default {
 
 <template>
 
-  <section class="main-code padding-lg container text-center">
+  <section class="main-code padding-lg  text-center">
     <div v-if="isLoaded" class="loader"> <PulseLoader /></div>
     <div v-else>
 
       <h3 class="text-center fw-bold fs-3 mb-4">CV</h3>
-      <a href="/assets/cv.pdf" class="btn btn-primary" download>Scarica il mio CV</a>
+      <a href="/assets/cv.pdf" class="btn btn-primary mb-4" download>Scarica il mio CV</a>
       <div class="col-10 mx-auto ">
         <img src="/assets/cv.png" alt="" class="img-fluid">
       </div>
@@ -70,9 +70,10 @@ export default {
 @media (min-width: 990px) {
   .padding-lg {
     padding-top: 100px !important;
-    padding-left: 160px !important;
+    padding-left: 250px !important;
   }
 }
+
 
 
 
