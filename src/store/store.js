@@ -152,7 +152,7 @@ export const store = reactive({
       id: 1,
       nome: "Bank Card Interactive",
       descrizione:
-        "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio e utilizzate per addebitare l'importo specificato. Il design è moderno e pulito.",
+        "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio. Il design è moderno e pulito.",
       img: "bankcard.png",
       linkRepo: "https://github.com/gdemartino93/interactive-card-bank",
       livePreview: "https://famous-churros-ba683e.netlify.app/",
@@ -169,16 +169,21 @@ export const store = reactive({
           nome: "Javascript",
           img: "js-icon.svg",
         },
+        {
+          nome: "Vue",
+          img: "vue-icon.svg",
+        },
       ],
     },
     {
       id: 2,
-      nome: "Spotify",
+      nome: "Netflix",
       descrizione:
-        "Questo sito web è stato creato con Vue3 e vengono importate le cover tramite chiamate API. E' stata aggiunta qualche feature per divertimento",
-      img: "bankcard.png",
-      linkRepo: "https://github.com/gdemartino93/spotify-Vue3js",
-      livePreview: "https://jazzy-beijinho-d0844d.netlify.app/",
+        "Progetto ispirato al famoso servizio di streaming Netflix. Per svilupparlo, ho utilizzato un API che mi ha permesso di avere un insieme di risultati congrui per la ricerca. All'hover sulla card appaiono le informazioni relative al film/serie TV quali: titolo, titolo originale, lignua, voto e overview. Inoltre è possibile effettuare una ricerca per nome."
+        ,
+      img: "netflix.png",
+      linkRepo: "https://github.com/gdemartino93/vite-boolflix",
+      livePreview: "",
       tecnologieUsate: [
         {
           nome: "Html",
@@ -187,6 +192,10 @@ export const store = reactive({
         {
           nome: "CSS",
           img: "css-icon.svg",
+        },
+        {
+          nome: "Boostrap",
+          img: "bootstrap-icon.svg",
         },
         {
           nome: "Javascript",
@@ -202,8 +211,8 @@ export const store = reactive({
       id: 3,
       nome: "Darkmode React ",
       descrizione:
-        "Questo sito è figlio delle mie esercitazioni con gli Hooks di React, infatti viene usato l'useEffect per cambiare la classe al tag html ogni volta che cambia il valore di 'theme'. Per cambiare l'icona all'interno del tasto mi servo dell'useState per tenere traccia di 'isDark' e cambiare l'icona tramite l'operatore ternario. N.b.: Gli articoli e i titolo sono stati scritti da ChatGPT (Lorem Ipsum RIP.) ",
-      img: "bankcard.png",
+        "Questo sito è figlio delle mie esercitazioni con gli Hooks di React, infatti viene usato l'useEffect per cambiare la classe al tag html ogni volta che cambia il valore di 'theme'. Per cambiare l'icona all'interno del tasto mi servo dell'useState per tenere traccia di 'isDark' e cambiare l'icona tramite l'operatore ternario. Salvo anche lo stato del tema nello storage del browser per non perdere lo stato al refresh o al ritorno in pagina.",
+      img: "darkmodereact.png",
       linkRepo: "https://github.com/gdemartino93/react-dark-mode",
       livePreview: "https://fascinating-kitsune-0f90e0.netlify.app/",
       tecnologieUsate: [
@@ -214,6 +223,10 @@ export const store = reactive({
         {
           nome: "CSS",
           img: "css-icon.svg",
+        },
+        {
+          nome: "Boostrap",
+          img: "bootstrap-icon.svg",
         },
         {
           nome: "Javascript",
@@ -230,7 +243,7 @@ export const store = reactive({
       nome: "Rick And Morty ",
       descrizione:
         "Questo sito è stato creato per fare pratica con le chiamate API, infatti in base alla selezione fa una chiamata API differente.",
-      img: "bankcard.png",
+      img: "morty.png",
       linkRepo: "https://github.com/gdemartino93/vite-breaking-bad",
       livePreview: "https://tubular-gingersnap-cdea29.netlify.app/",
       tecnologieUsate: [
@@ -241,6 +254,10 @@ export const store = reactive({
         {
           nome: "CSS",
           img: "css-icon.svg",
+        },
+                {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
         },
         {
           nome: "Javascript",
@@ -254,10 +271,10 @@ export const store = reactive({
     },
     {
       id: 5,
-      nome: "Whatsapp Replica ",
+      nome: "Whatsapp Desktop ",
       descrizione:
         "Ho sviluppato una replica della famosa applicazione di messaggistica istantanea con alcune features in javascript. Infatti avremo la risposta random del computer(no AI), possibilità di filtrare i contatti nell'input cerca, cambio di stato con 'Sta Scrivendo...' e 'Online', possibilitò di pickare l'emoticon da una tabella di emoticon, possibilità di eliminare i messaggi ",
-      img: "bankcard.png",
+      img: "whatsapp.png",
       linkRepo: "https://github.com/gdemartino93/vue-boolzapp",
       livePreview: "https://gdemartino93.github.io/vue-boolzapp/",
       tecnologieUsate: [
@@ -270,8 +287,100 @@ export const store = reactive({
           img: "css-icon.svg",
         },
         {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
           nome: "Javascript",
           img: "js-icon.svg",
+        },
+        {
+          nome: "Vue",
+          img: "vue-icon.svg",
+        },
+        
+      ],
+    },
+    {
+      id: 6,
+      nome: "Slider Città React ",
+      descrizione:
+        "Uno slider creato con React che consente di scorrere in loop le città disponibili. È stato incluso un loader stile Pacman, di una libreria, che viene caricato fino a quando la chiamata API non viene effettuata con successo.Se la chiamata API ritorna un errore viene mostrato un componente Error. Tutto viene gestito tramite gli hooks e vengono passati i dati alla singola città tramite props.",
+      img: "slidercity.png",
+      linkRepo: "https://github.com/gdemartino93/react-slider-city",
+      livePreview: "https://courageous-seahorse-f51d1e.netlify.app/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+        {
+          nome: "React",
+          img: "react-icon.svg",
+        },
+        
+      ],
+    },
+    {
+      id: 7,
+      nome: "Prossimi eventi React ",
+      descrizione:
+        "Un sito molto semplice creato con react che mostra i prossimi eventi in città e ti dà la possibilità di eliminare ed aggiornare la lista degli eventi.",
+      img: "prossimieventi.png",
+      linkRepo: "https://github.com/gdemartino93/react-prossimi-eventi",
+      livePreview: "https://prossimieventi.netlify.app/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+        {
+          nome: "React",
+          img: "react-icon.svg",
+        },
+        
+      ],
+    },
+    {
+      id: 8,
+      nome: "Discord ",
+      descrizione:
+        "Uno dei primissimi progetti realizzati ispirato a Discord, la famosa piattaforma statunitense di VoIP, messaggistica istantanea e distribuzione digitale",
+      img: "discord.png",
+      linkRepo: "https://github.com/gdemartino93/htmlcss-discord",
+      livePreview: "https://gdemartino93.github.io/htmlcss-discord/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
         },
       ],
     },

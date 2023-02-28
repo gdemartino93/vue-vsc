@@ -19,7 +19,7 @@ import { store } from "../store/store";
 </script>
 <template>
     <MDBCard class="col-11 col-md-4 col-lg-3 project">
-        <MDBCardImg top :src="`/assets/${project.img}`" alt="..."/>
+        <MDBCardImg top :src="`/assets/progetti/${project.img}`" alt="..."/>
         <MDBCardBody>
             <MDBCardTitle class="fw-bold">{{ project.nome }}</MDBCardTitle>
             <MDBCardText>
@@ -34,13 +34,9 @@ import { store } from "../store/store";
             </ul>
         </MDBCardBody>
 
-        <MDBCardBody class="d-flex justify-content-between align-items-end">
-        
-        <a :href="project.linkRepo" target="_blank">Link Github</a>
-        <a :href="project.livePreview" target="_blank">Live Preview</a>
-
-        <!-- <MDBCardLink :href="project.linkRepo">Card link</MDBCardLink>
-        <MDBCardLink href="#">Another link</MDBCardLink> -->
+        <MDBCardBody class="d-flex justify-content-between align-items-end">     
+            <a :href="project.linkRepo" target="_blank">Link Github</a>
+            <a :href="project.livePreview" target="_blank" v-if="project.livePreview.length !== 0 ">Live Preview</a>
         </MDBCardBody>
     </MDBCard>
 </template>
