@@ -12,12 +12,16 @@ export default {
 </script>
 
 <template>
-  <RouterLink to="/">
+
+  <div class="d-flex">
     <article class="tab d-flex align-items-center">
-      <img src="/assets/html-icon.svg" alt="home-icon" />
-      <span>Home</span>
+      <RouterLink to="/">
+        <img src="/assets/html-icon.svg" alt="home-icon" />
+        <span>Home</span>
+      </RouterLink>
     </article>
-  </RouterLink>
+  </div>
+
   <div class="d-flex" v-for="(tab, index) in store.tabAperte" :key="index">
     <article class="tab d-flex align-items-center">
       <RouterLink :to="tab.path" key="tab.id">
@@ -38,6 +42,7 @@ export default {
 .delete {
   position: absolute;
   right: 5px;
+  cursor: pointer;
 }
 .router-link-active {
   font-weight: bold;
@@ -53,6 +58,7 @@ export default {
   display: flex;
   align-items: center;
   position: relative;
+  margin: 0 1px;
   img {
     width: 20px;
     height: 20px;
