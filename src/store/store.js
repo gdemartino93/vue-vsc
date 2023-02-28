@@ -170,7 +170,7 @@ export const store = reactive({
           img: "js-icon.svg",
         },
         {
-          nome: "Vue",
+          nome: "Vue3",
           img: "vue-icon.svg",
         },
       ],
@@ -202,7 +202,7 @@ export const store = reactive({
           img: "js-icon.svg",
         },
         {
-          nome: "Vue3.js",
+          nome: "Vue3",
           img: "vue-icon.svg",
         },
       ],
@@ -264,7 +264,7 @@ export const store = reactive({
           img: "js-icon.svg",
         },
         {
-          nome: "Vue3.js",
+          nome: "Vue3",
           img: "vue-icon.svg",
         },
       ],
@@ -295,7 +295,7 @@ export const store = reactive({
           img: "js-icon.svg",
         },
         {
-          nome: "Vue",
+          nome: "Vue3",
           img: "vue-icon.svg",
         },
         
@@ -381,6 +381,122 @@ export const store = reactive({
         {
           nome: "CSS",
           img: "css-icon.svg",
+        },
+      ],
+    },
+    {
+      id: 9,
+      nome: "React - (n)Ice Cream  ",
+      descrizione:
+        "Un sito creato con React dove tramite una chiamata API otteniamo la lista dei gelati disponibili con la possibilità di filtrarli per categoria.",
+      img: "gelateria.png",
+      linkRepo: "https://github.com/gdemartino93/nice-cream-react",
+      livePreview: "https://coruscating-scone-6c67f4.netlify.app/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+        {
+          nome: "React",
+          img: "react-icon.svg",
+        },
+      ],
+    },
+    {
+      id: 10,
+      nome: "Palette React ",
+      descrizione:
+        "Selezionando un colore ed inserendo la quantità, viene mostrato il numero di sfumature richiesto per quel colore",
+      img: "gradient.png",
+      linkRepo: "https://github.com/gdemartino93/react-color-grading",
+      livePreview: "https://adorable-pie-69a8dd.netlify.app/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+        {
+          nome: "React",
+          img: "react-icon.svg",
+        },
+      ],
+    },
+    {
+      id: 11,
+      nome: "Slider vue3 ",
+      descrizione:
+        "Uno slider creato ai miei esordi con js vanilla, composto da immagine e relativa thumbnail con la possibilità di scorrere tra le immagini o inserire l'autoplay. n.b.: Che la grafica non è stata curata è un dato oggettivo :D",
+      img: "slidervue.png",
+      linkRepo: "https://github.com/gdemartino93/js-array-objects-carousel",
+      livePreview: "https://gdemartino93.github.io/js-array-objects-carousel/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+      ],
+    },
+    {
+      id: 12,
+      nome: "Slider vue3 ",
+      descrizione:
+        "Un sito completo creato con Vue3 ",
+      img: "land.png",
+      linkRepo: "https://github.com/gdemartino93/proj-html-vuejs",
+      livePreview: "https://comforting-malabi-f3b74b.netlify.app/",
+      tecnologieUsate: [
+        {
+          nome: "Html",
+          img: "html-icon.svg",
+        },
+        {
+          nome: "CSS",
+          img: "css-icon.svg",
+        },
+        {
+          nome: "Sass",
+          img: "sass-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Vue3 ",
+          img: "js-icon.svg",
         },
       ],
     },
