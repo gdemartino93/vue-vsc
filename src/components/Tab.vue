@@ -66,5 +66,8 @@ export default {
 }
 a {
   height: 100%;
+  &:hover{
+    color: var(--color-text-tab);
+  }
 }
 </style>

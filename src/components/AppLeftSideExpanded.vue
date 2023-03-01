@@ -14,17 +14,20 @@ export default {
     <h4 class="p-3">EXPLORER</h4>
     <ul class="d-flex flex-column gap-1">
       <span class="fw-bold">FILES</span>
+      <!-- Link alla homepage -->
       <RouterLink to="/">
         <li>
           <img src="/assets/html-icon.svg" alt="html-icon" />
           <span>Home</span>
         </li>
       </RouterLink>
+      <!-- Link alle pagine, iterando l'array pages dello store -->
+      <!-- // Metodo che apre una nuova tab nella GUI -->
       <RouterLink
         v-for="(page, index) in store.pages"
         :key="index"
         :to="page.path"
-        @click="store.apriTab(page.id)"
+        @click="store.apriTab(page.id)" 
       >
         <li>
           <img :src="`/assets/${page.img}`" :alt="page.name" />
@@ -56,6 +59,7 @@ li {
   cursor: pointer;
   &:hover {
     background: var(--hover-bg-bar);
+    color: var(--color-text);
   }
   img {
     width: 20px;
