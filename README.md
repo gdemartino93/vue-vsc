@@ -1,29 +1,11 @@
-# vue-vsc
-
-This template should help get you started developing with Vue 3 in Vite.
-
-## Recommended IDE Setup
-
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
-
-```sh
-npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
-```
-
-### Compile and Minify for Production
-
-```sh
-npm run build
-```
+# [LIVE](www.gianlucademartino.it)
+![1](https://user-images.githubusercontent.com/113302882/222135136-d9c69dc5-8fad-4053-bff7-a1b06be7ec1e.jpg)
+![2](https://user-images.githubusercontent.com/113302882/222135138-b6de0e0e-6898-49de-b62f-fa0fda7ff367.jpg)
+![3](https://user-images.githubusercontent.com/113302882/222135143-ec209165-31f6-4658-803c-1f062a1c93bc.jpg)
+![5](https://user-images.githubusercontent.com/113302882/222135156-7deaab42-56fc-4e04-96ba-b2d8f375cafd.jpg)
+![6](https://user-images.githubusercontent.com/113302882/222135157-79da8d8a-5a54-444d-a868-528d94949857.jpg)
+![7](https://user-images.githubusercontent.com/113302882/222135161-2c7f3823-7fcb-4dab-823c-e8f4063408fe.jpg)
+![8](https://user-images.githubusercontent.com/113302882/222135163-f2d04062-3075-4a93-b4bb-062344aff972.jpg)
+![9](https://user-images.githubusercontent.com/113302882/222135168-6e286608-ba90-4bec-9827-4ea20ee6607b.jpg)
+![4](https://user-images.githubusercontent.com/113302882/222135169-3db4c3ab-746a-4524-a2b3-4e78f9a98c69.jpg)
+![10](https://user-images.githubusercontent.com/113302882/222135177-9dff1101-be4c-4325-97c6-00c83273f0fa.jpg)
