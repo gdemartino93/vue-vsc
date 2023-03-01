@@ -1,10 +1,11 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue';
-import CV from '../views/pages/CV.vue';
-import About from '../views/pages/About.vue';
-import Contacts from '../views/pages/Contacts.vue';
-import Home from '../components/AppMainCode.vue';
-import Projects from '../views/pages/Projects.vue';
+
+import CV from '../views/pages/CV.vue'
+import About from '../views/pages/About.vue'
+import Contacts from '../views/pages/Contacts.vue'
+import Home from '../components/AppMainCode.vue'
+import Projects from '../views/pages/Projects.vue'
+import { store } from '../store/store'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -12,29 +13,37 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: About,
     },
     {
       path: '/contacts',
       name: 'contacts',
-      component: Contacts
+      component: Contacts,
     },
-        {
+    {
       path: '/projects',
       name: 'projects',
-      component: Projects
+      component: Projects,
     },
     {
       path: '/cv',
       name: 'cv',
-      component: CV
+      component: CV,
     },
-  ]
+  ],
+})
+
+router.beforeEach((to, _from, next) => {
+  const page = store.pages.find((page) => page.path === to.path)
+  if (page && !store.tabAperte.some((tab) => tab.path === to.path)) {
+    store.apriTab(page.id)
+  }
+  return next()
 })
 
 export default router
