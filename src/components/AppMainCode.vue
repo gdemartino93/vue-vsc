@@ -62,16 +62,17 @@ export default {
 
     const typewriter = new Typewriter(target, {
       loop: false,
-      delay: 0
+      delay: 35
     });
 
     if (this.isFirstVisit) {
       typewriter
         .typeString(`Ciao Mondo! 👋🏻 <br>`)
-        .pauseFor(400)
+        .pauseFor(300)
         .typeString("Sono Gianluca, <br> Web Developer. <br>")
         .deleteChars(15)
         .typeString('Jr. Full Stack Web Developer.')
+        .pauseFor(300)
         .start()
         .callFunction(() => {
           store.scritturaTerminata = true;
