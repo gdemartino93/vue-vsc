@@ -1,25 +1,19 @@
-
 <script>
-import { RouterLink, RouterView } from 'vue-router';
-import AppHeader from './components/AppHeader.vue';
-import AppLeftSide from './components/AppLeftSide.vue';
-import AppLeftSideExpanded from './components/AppLeftSideExpanded.vue';
-import AppNavigation from './components/AppNavigation.vue';
-import AppMainCode from './components/AppMainCode.vue';
+import AppHeader from './components/AppHeader.vue'
+import AppLeftSide from './components/AppLeftSide.vue'
+import AppMainCode from './components/AppMainCode.vue'
+import AppNavigation from './components/AppNavigation.vue'
+import AppLeftSideExpanded from './components/AppLeftSideExpanded.vue'
+
 export default {
   components: {
     AppHeader,
     AppLeftSide,
     AppMainCode,
+    AppNavigation,
     AppLeftSideExpanded,
-    AppNavigation
-},
-  methods: {
-
-  }
+  },
 }
-
-
 </script>
 
 <template>
@@ -31,16 +25,7 @@ export default {
     <section class="d-flex">
       <AppLeftSide />
       <AppLeftSideExpanded />
-
       <RouterView />
-
     </section>
-
   </main>
-
 </template>
-
-
-<style scoped>
-
-</style>
