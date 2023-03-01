@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  transition: color 0.7s ease, background-color 0.7s ease;
 }
 
 body {
@@ -151,6 +152,7 @@ h4 {
 
       // codice pagina css
       --color-text-tag : #9872A2;
+
   }
 
   

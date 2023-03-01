@@ -1,13 +1,17 @@
+<!-- FIXARE PADDIND LEFT HOME PAGE -->
+
+
+
 <template>
   <section class="main-code padding-lg">
     <article class="col-12 d-flex flex-wrap">
-      <div class="col-12 col-lg-12">
+      <div class="col-12 col-lg-12" v-if="store.scritturaTerminata === false">
         <p class="typewriter fw-bold fs-3">
           <!-- qui scrive il testo typewrite -->
         </p>
       </div>
       <!-- visibile -->
-      <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-5" v-if="store.scritturaTerminata && isMounted">
+      <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-2" v-if="store.scritturaTerminata && isMounted">
 
         <span class="fw-bold fs-3"> &lt;Benvenuto&gt;</span>
         <p class="testo">Benvenuti nel mio sito! <br>
@@ -29,21 +33,30 @@
 </template>
 
 <script>
-
 import Typewriter from 'typewriter-effect/dist/core';
-import {store} from '../store/store';
+import { store } from '../store/store';
 import Form from './Form.vue';
+
 export default {
-  components :{
+  components: {
     Form,
   },
   data() {
     return {
       store,
-      isMounted: false 
+      isMounted: false,
+      isFirstVisit: false,
     };
   },
- 
+
+  created() {
+    const hasVisitedBefore = localStorage.getItem('hasVisitedBefore');
+    if (!hasVisitedBefore) {
+      localStorage.setItem('hasVisitedBefore', true);
+      this.isFirstVisit = true;
+    }
+  },
+
   mounted() {
     const target = document.querySelector('.typewriter');
 
@@ -52,20 +65,26 @@ export default {
       delay: 0
     });
 
-    typewriter
-      .typeString(`Ciao Mondo! 👋🏻 <br>`)
-      .pauseFor(400)
-      .typeString("Sono Gianluca, <br> Web Developer. <br>")
-      .deleteChars(15)
-      .typeString('Jr. Full Stack Web Developer.')
-      .start()
-      .callFunction(() => {
-        store.scritturaTerminata = true; // setta scritturaTerminata a true quando la scrittura è terminata 
-        this.isMounted = true; // setta isMounted a true quando il componente è stato montato
-      });
-  }
+    if (this.isFirstVisit) {
+      typewriter
+        .typeString(`Ciao Mondo! 👋🏻 <br>`)
+        .pauseFor(400)
+        .typeString("Sono Gianluca, <br> Web Developer. <br>")
+        .deleteChars(15)
+        .typeString('Jr. Full Stack Web Developer.')
+        .start()
+        .callFunction(() => {
+          store.scritturaTerminata = true;
+          this.isMounted = true;
+        });
+    } else {
+      store.scritturaTerminata = true;
+      this.isMounted = true;
+    }
+  },
 };
 </script>
+
 
 <style lang="scss" scoped>
 *{

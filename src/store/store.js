@@ -148,6 +148,39 @@ export const store = reactive({
     },
   },
   projects: [
+    // gelateria react
+    {
+          id: 9,
+          nome: "React - (n)Ice Cream  ",
+          descrizione:
+            "Un sito creato con React dove tramite una chiamata API otteniamo la lista dei gelati disponibili con la possibilità di filtrarli per categoria.",
+          img: "gelateria.png",
+          linkRepo: "https://github.com/gdemartino93/nice-cream-react",
+          livePreview: "https://coruscating-scone-6c67f4.netlify.app/",
+          tecnologieUsate: [
+            {
+              nome: "Html",
+              img: "html-icon.svg",
+            },
+            {
+              nome: "CSS",
+              img: "css-icon.svg",
+            },
+            {
+              nome: "Bootstrap",
+              img: "bootstrap-icon.svg",
+            },
+            {
+              nome: "Javascript",
+              img: "js-icon.svg",
+            },
+            {
+              nome: "React",
+              img: "react-icon.svg",
+            },
+          ],
+    },
+    // bank card interactive
     {
       id: 1,
       nome: "Bank Card Interactive",
@@ -175,6 +208,73 @@ export const store = reactive({
         },
       ],
     },
+    // whatsapp web
+    {
+          id: 5,
+          nome: "Whatsapp Desktop ",
+          descrizione:
+            "Ho sviluppato una replica della famosa applicazione di messaggistica istantanea con alcune features in javascript. Infatti avremo la risposta random del computer(no AI), possibilità di filtrare i contatti nell'input cerca, cambio di stato con 'Sta Scrivendo...' e 'Online', possibilitò di pickare l'emoticon da una tabella di emoticon, possibilità di eliminare i messaggi ",
+          img: "whatsapp.png",
+          linkRepo: "https://github.com/gdemartino93/vue-boolzapp",
+          livePreview: "https://gdemartino93.github.io/vue-boolzapp/",
+          tecnologieUsate: [
+            {
+              nome: "Html",
+              img: "html-icon.svg",
+            },
+            {
+              nome: "CSS",
+              img: "css-icon.svg",
+            },
+            {
+              nome: "Bootstrap",
+              img: "bootstrap-icon.svg",
+            },
+            {
+              nome: "Javascript",
+              img: "js-icon.svg",
+            },
+            {
+              nome: "Vue3",
+              img: "vue-icon.svg",
+            },
+            
+          ],
+    },
+        // slider react città
+        {
+          id: 6,
+          nome: "Slider Città React ",
+          descrizione:
+            "Uno slider creato con React che consente di scorrere in loop le città disponibili. È stato incluso un loader stile Pacman, di una libreria, che viene caricato fino a quando la chiamata API non viene effettuata con successo.Se la chiamata API ritorna un errore viene mostrato un componente Error. Tutto viene gestito tramite gli hooks e vengono passati i dati alla singola città tramite props.",
+          img: "slidercity.png",
+          linkRepo: "https://github.com/gdemartino93/react-slider-city",
+          livePreview: "https://courageous-seahorse-f51d1e.netlify.app/",
+          tecnologieUsate: [
+            {
+              nome: "Html",
+              img: "html-icon.svg",
+            },
+            {
+              nome: "CSS",
+              img: "css-icon.svg",
+            },
+            {
+              nome: "Bootstrap",
+              img: "bootstrap-icon.svg",
+            },
+            {
+              nome: "Javascript",
+              img: "js-icon.svg",
+            },
+            {
+              nome: "React",
+              img: "react-icon.svg",
+            },
+            
+          ],
+        },
+    // netflix
     {
       id: 2,
       nome: "Netflix",
@@ -207,6 +307,7 @@ export const store = reactive({
         },
       ],
     },
+    // dark mode react
     {
       id: 3,
       nome: "Darkmode React ",
@@ -238,6 +339,7 @@ export const store = reactive({
         },
       ],
     },
+    // rick and morty api
     {
       id: 4,
       nome: "Rick And Morty ",
@@ -269,70 +371,7 @@ export const store = reactive({
         },
       ],
     },
-    {
-      id: 5,
-      nome: "Whatsapp Desktop ",
-      descrizione:
-        "Ho sviluppato una replica della famosa applicazione di messaggistica istantanea con alcune features in javascript. Infatti avremo la risposta random del computer(no AI), possibilità di filtrare i contatti nell'input cerca, cambio di stato con 'Sta Scrivendo...' e 'Online', possibilitò di pickare l'emoticon da una tabella di emoticon, possibilità di eliminare i messaggi ",
-      img: "whatsapp.png",
-      linkRepo: "https://github.com/gdemartino93/vue-boolzapp",
-      livePreview: "https://gdemartino93.github.io/vue-boolzapp/",
-      tecnologieUsate: [
-        {
-          nome: "Html",
-          img: "html-icon.svg",
-        },
-        {
-          nome: "CSS",
-          img: "css-icon.svg",
-        },
-        {
-          nome: "Bootstrap",
-          img: "bootstrap-icon.svg",
-        },
-        {
-          nome: "Javascript",
-          img: "js-icon.svg",
-        },
-        {
-          nome: "Vue3",
-          img: "vue-icon.svg",
-        },
-        
-      ],
-    },
-    {
-      id: 6,
-      nome: "Slider Città React ",
-      descrizione:
-        "Uno slider creato con React che consente di scorrere in loop le città disponibili. È stato incluso un loader stile Pacman, di una libreria, che viene caricato fino a quando la chiamata API non viene effettuata con successo.Se la chiamata API ritorna un errore viene mostrato un componente Error. Tutto viene gestito tramite gli hooks e vengono passati i dati alla singola città tramite props.",
-      img: "slidercity.png",
-      linkRepo: "https://github.com/gdemartino93/react-slider-city",
-      livePreview: "https://courageous-seahorse-f51d1e.netlify.app/",
-      tecnologieUsate: [
-        {
-          nome: "Html",
-          img: "html-icon.svg",
-        },
-        {
-          nome: "CSS",
-          img: "css-icon.svg",
-        },
-        {
-          nome: "Bootstrap",
-          img: "bootstrap-icon.svg",
-        },
-        {
-          nome: "Javascript",
-          img: "js-icon.svg",
-        },
-        {
-          nome: "React",
-          img: "react-icon.svg",
-        },
-        
-      ],
-    },
+    // prossimi eventi react
     {
       id: 7,
       nome: "Prossimi eventi React ",
@@ -365,6 +404,7 @@ export const store = reactive({
         
       ],
     },
+    // discord
     {
       id: 8,
       nome: "Discord ",
@@ -384,37 +424,8 @@ export const store = reactive({
         },
       ],
     },
-    {
-      id: 9,
-      nome: "React - (n)Ice Cream  ",
-      descrizione:
-        "Un sito creato con React dove tramite una chiamata API otteniamo la lista dei gelati disponibili con la possibilità di filtrarli per categoria.",
-      img: "gelateria.png",
-      linkRepo: "https://github.com/gdemartino93/nice-cream-react",
-      livePreview: "https://coruscating-scone-6c67f4.netlify.app/",
-      tecnologieUsate: [
-        {
-          nome: "Html",
-          img: "html-icon.svg",
-        },
-        {
-          nome: "CSS",
-          img: "css-icon.svg",
-        },
-        {
-          nome: "Bootstrap",
-          img: "bootstrap-icon.svg",
-        },
-        {
-          nome: "Javascript",
-          img: "js-icon.svg",
-        },
-        {
-          nome: "React",
-          img: "react-icon.svg",
-        },
-      ],
-    },
+
+    // color gradient
     {
       id: 10,
       nome: "Palette React ",
@@ -446,6 +457,7 @@ export const store = reactive({
         },
       ],
     },
+    // slidere vue3
     {
       id: 11,
       nome: "Slider vue3 ",
@@ -469,9 +481,10 @@ export const store = reactive({
         },
       ],
     },
+    // landrick mid term project
     {
       id: 12,
-      nome: "Slider vue3 ",
+      nome: "Landrick ",
       descrizione:
         "Un sito completo creato con Vue3 ",
       img: "land.png",
