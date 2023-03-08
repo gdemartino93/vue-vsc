@@ -70,10 +70,6 @@ export default {
     color: var(--color-text);
     background-color: var(--color-bg-side);
     border-radius: 5px;
-    &:hover {
-      background-color: var(--hover-bg-bar);
-      color: var(--color-text);
-    }
   }
   img {
     height: 30px;
@@ -82,15 +78,10 @@ export default {
   ul {
     color: var(--color-text);
     li {
-      cursor: pointer;
+      // cursor: pointer;
       padding: 5px;
       span {
         color: var(--color-text);
-        &:hover {
-          color: var(--color-text);
-          background: var(--hover-bg-bar);
-          border-radius: 5px;
-        }
       }
     }
   }

@@ -241,8 +241,8 @@ export const store = reactive({
             
           ],
     },
-        // slider react città
-        {
+    // slider react città
+    {
           id: 6,
           nome: "Slider Città React ",
           descrizione:
@@ -273,7 +273,7 @@ export const store = reactive({
             },
             
           ],
-        },
+    },
     // netflix
     {
       id: 2,
@@ -306,6 +306,39 @@ export const store = reactive({
           img: "vue-icon.svg",
         },
       ],
+    },
+    
+    // color gradient
+    {
+        id: 10,
+        nome: "Palette React ",
+        descrizione:
+          "Selezionando un colore ed inserendo la quantità, viene mostrato il numero di sfumature richiesto per quel colore",
+        img: "gradient.png",
+        linkRepo: "https://github.com/gdemartino93/react-color-grading",
+        livePreview: "https://adorable-pie-69a8dd.netlify.app/",
+        tecnologieUsate: [
+          {
+            nome: "Html",
+            img: "html-icon.svg",
+          },
+          {
+            nome: "CSS",
+            img: "css-icon.svg",
+          },
+          {
+            nome: "Bootstrap",
+            img: "bootstrap-icon.svg",
+          },
+          {
+            nome: "Javascript",
+            img: "js-icon.svg",
+          },
+          {
+            nome: "React",
+            img: "react-icon.svg",
+          },
+        ],
     },
     // dark mode react
     {
@@ -425,38 +458,6 @@ export const store = reactive({
       ],
     },
 
-    // color gradient
-    {
-      id: 10,
-      nome: "Palette React ",
-      descrizione:
-        "Selezionando un colore ed inserendo la quantità, viene mostrato il numero di sfumature richiesto per quel colore",
-      img: "gradient.png",
-      linkRepo: "https://github.com/gdemartino93/react-color-grading",
-      livePreview: "https://adorable-pie-69a8dd.netlify.app/",
-      tecnologieUsate: [
-        {
-          nome: "Html",
-          img: "html-icon.svg",
-        },
-        {
-          nome: "CSS",
-          img: "css-icon.svg",
-        },
-        {
-          nome: "Bootstrap",
-          img: "bootstrap-icon.svg",
-        },
-        {
-          nome: "Javascript",
-          img: "js-icon.svg",
-        },
-        {
-          nome: "React",
-          img: "react-icon.svg",
-        },
-      ],
-    },
     // slidere vue3
     {
       id: 11,

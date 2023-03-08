@@ -47,6 +47,9 @@ import { store } from "../store/store";
 }
 .project{
     background: var(--color-bg-code);
+    a{
+        cursor: pointer;
+    }
 }
 .tecnologieUsate{
     img{
