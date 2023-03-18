@@ -46,38 +46,38 @@ export default {
     };
   },
   methods: {
-  async getReply() {
-    this.isWriting = true;
-    const headers = {
-      'Content-Type': 'application/json',
-      'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
-    };
-    const data = {
-      'model': 'gpt-3.5-turbo',
-      'messages': [{'role': 'user', 'content': this.message}],
-      'temperature': 0.7
-    };
-    this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": ""} ]];
+    async getReply() {
+  this.isWriting = true;
+  const headers = {
+    'Content-Type': 'application/json',
+    'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
+  };
+  const data = {
+    'model': 'gpt-3.5-turbo',
+    'messages': [{'role': 'user', 'content': this.message}],
+    'temperature': 0.7
+  };
+  this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": ""} ]];
 
-    await axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
-      .then(response => {
-        this.risposta = response.data.choices[0].message.content;
-        this.frasi = [...this.frasi, [{}, {"risposta": this.risposta}]];
-        // set iswriting to hide is writing msg
-        this.isWriting = false;
-        // empty vmodel message
-        this.message = "";
-        // set isworking to hide disclaimer
-        this.isWorking = true;
+  // svuota l'input dell'utente
+  this.message = "";
 
-        this.$refs.lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' })
-      })
-      .catch(error => {
-        console.error(error);
-        this.isWorking = false;
-      });
-      this.message = ""
-  }
+  await axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
+    .then(response => {
+      this.risposta = response.data.choices[0].message.content;
+      this.frasi = [...this.frasi, [{}, {"risposta": this.risposta}]];
+      // set iswriting to hide is writing msg
+      this.isWriting = false;
+      // set isworking to hide disclaimer
+      this.isWorking = true;
+
+      this.$refs.lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' })
+    })
+    .catch(error => {
+      console.error(error);
+      this.isWorking = false;
+    });
+}
 },
   mounted(){
   }
