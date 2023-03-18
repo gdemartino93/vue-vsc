@@ -8,7 +8,7 @@ import "bootstrap/dist/js/bootstrap.js";
 import "./styles/styles.scss";
 import "animate.css";
 import dotenv from 'dotenv';
-// dotenv.config()
+
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -25,6 +25,7 @@ import {
   faLightbulb,
   faMinus,
   faMoon,
+  faRobot,
   faStar,
   faUser,
   faUserSecret,
@@ -51,7 +52,8 @@ library.add(
   faStar,
   faUser,
   faDesktop,
-  faXmark
+  faXmark,
+  faRobot
 );
 
 const app = createApp(App);

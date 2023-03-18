@@ -56,6 +56,9 @@ export default {
         <RouterLink to="/cv">
             <font-awesome-icon icon="fa-solid fa-file" />
         </RouterLink>
+        <RouterLink to="/ai">
+          <font-awesome-icon icon="fa-solid fa-robot" />
+        </RouterLink>
 
 
 
