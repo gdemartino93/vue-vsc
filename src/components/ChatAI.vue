@@ -19,7 +19,10 @@
           <span class="risposta">{{ item[1].risposta }}</span>
         </div>
 
+
       </div>
+      <span class="fs-1 text-danger" v-if="isWriting">Sta scrivendo</span>
+
       <span class="italic" v-if="!isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
 </span>
@@ -38,11 +41,12 @@ export default {
       frasi:[],
       risposta: '',
       isWorking : false,
+      isWriting : false
     };
   },
   methods: {
   getReply() {
-
+    this.isWriting = true;
     const headers = {
       'Content-Type': 'application/json',
       'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
@@ -56,14 +60,17 @@ export default {
 
     axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
       .then(response => {
+        this.isWriting = false
         this.risposta = response.data.choices[0].message.content;
         this.frasi = [...this.frasi, [{},{"risposta": this.risposta} ]];
         this.message = "";
         this.isWorking = true;
+   
       })
       .catch(error => {
         console.error(error);
         this.isWorking = false;
+        this.isWriting = true
       });
   }
 },
