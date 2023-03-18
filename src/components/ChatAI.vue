@@ -5,12 +5,7 @@
       <p>ChatGPT è diventato uno strumento indispensabile per gli sviluppatori. <br>
       Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi preziosi durante lo sviluppo di applicazioni. Ad esempio, ChatGPT può essere utilizzato per generare documentazione, messaggi di errore e avvisi, messaggi di feedback degli utenti e molto altro. <br> Inoltre, gli sviluppatori possono utilizzare ChatGPT per automatizzare il processo di testing e revisionare il codice. <br> In breve, ChatGPT rappresenta uno strumento che può fare la differenza nella vita di ogni sviluppatore, permettendo loro di concentrarsi sui compiti più importanti e di migliorare la qualità del loro lavoro. <br>
       </p>
-      <div class="col-12">
-        <form action="" method="post" @submit.prevent="getReply" class="my-5">
-          <input class="form-control" type="text" placeholder="Chiedimi tutto quello che vuoi" aria-label="Chiedimi tutto quello che vuoi" v-model="message">
-          <button class="btn btn-success my-2" type="submit" v-if="message.length > 0">Invia</button>
-        </form>
-      </div>
+
       <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4" >
         <div class="box-domanda col-12 col-md-4 col-lg-5 animate__animated animate__bounceInLeft" v-if="item[0].messaggio">
           <span class="domanda" >{{ item[0].messaggio }}</span>
@@ -20,6 +15,13 @@
         </div>
       </div>
       <span class="fs-2 text-danger align-self-end animate__animated  animate__flash" v-if="isWriting">Sta scrivendo</span>
+
+      <div class="col-12">
+        <form action="" method="post" @submit.prevent="getReply" class="my-5">
+          <input class="form-control" type="text" placeholder="Chiedimi tutto quello che vuoi" aria-label="Chiedimi tutto quello che vuoi" v-model="message">
+          <button class="btn btn-success my-2" type="submit" v-if="message.length > 0">Invia</button>
+        </form>
+      </div>
 
       <span class="italic" v-if="!isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
