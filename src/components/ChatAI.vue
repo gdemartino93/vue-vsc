@@ -7,7 +7,7 @@
       </p>
       <div class="col-12">
         <form action="" method="post" @submit.prevent="getReply">
-          <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="message">
+          <input class="form-control" type="text" placeholder="Chiedimi tutto quello che vuoi" aria-label="Chiedimi tutto quello che vuoi" v-model="message">
           <button class="btn btn-success my-2" type="submit">Invia</button>
         </form>
       </div>
