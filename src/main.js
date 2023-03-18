@@ -55,6 +55,9 @@ library.add(
 
 const app = createApp(App);
 
+app.config.globalProperties.$key = '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'
+
+
 app.component("font-awesome-icon", FontAwesomeIcon);
 app.use(router);
 

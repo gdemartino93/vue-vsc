@@ -26,14 +26,13 @@ export default {
       message: '',
       frasi:[],
       risposta: '',
-      OPENAI_API_KEY: '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',
     };
   },
   methods: {
     getReply() {
       const headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.OPENAI_API_KEY
+        'Authorization': 'Bearer ' + this.$key
       };
       const data = {
         'model': 'gpt-3.5-turbo',
@@ -45,11 +44,15 @@ export default {
           this.risposta = response.data.choices[0].message.content;
           this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": this.risposta} ]];
           this.message = "";
+        
         })
         .catch(error => {
           console.error(error);
         });
     }
+  },
+  mounted(){
+
   }
 }
 </script>
