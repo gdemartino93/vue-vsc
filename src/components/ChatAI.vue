@@ -9,9 +9,9 @@
           <button class="btn btn-success" type="submit">Invia</button>
         </form>
       </div>
-      <div v-for="(item, index) in frasi" :key="index">
-        <div class="text-danger">{{ item[0].messaggio }}</div>
-        <div class="text-success">{{ item[1].risposta }}</div>
+      <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column">
+        <span class="domanda">{{ item[0].messaggio }}</span>
+        <span class="risposta">{{ item[1].risposta }}</span>
       </div>
     </div>
   </section>
@@ -100,5 +100,22 @@ export default {
       width: 3rem;
     }
   }
-  
+  .domanda{
+    padding: 10px;
+    background: green;
+    border-radius: 10px;
+    color: white;
+    width: 30%;
+    align-self: flex-start;
+    text-align: center;
+  }
+  .risposta{
+    padding: 10px;
+    background: cornflowerblue;
+    border-radius: 10px;
+    color: white;
+    width: 30%;
+    align-self: flex-end;
+    text-align: center;
+  }
   </style>
