@@ -1,15 +1,18 @@
 <template>
   <section class="main-code padding-lg">
     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto">
-      <h3 class="text-center fw-bold fs-3 mb-4">Parlo di me:</h3>
+      <h3 class="text-center fw-bold fs-3 mb-4">ChatGPT:</h3>
+      <p></p>
       <div class="col-4">
         <form action="" method="post" @submit.prevent="getReply">
           <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="message">
           <button class="btn btn-success" type="submit">Invia</button>
         </form>
       </div>
-      <div v-for="frase in frasi">{{ frasi }}</div>
-      <div v-html="risposta"></div>
+      <div v-for="(item, index) in frasi" :key="index">
+        <div class="text-danger">{{ item[0].messaggio }}</div>
+        <div class="text-success">{{ item[1].risposta }}</div>
+      </div>
     </div>
   </section>
 </template>
@@ -23,7 +26,7 @@ export default {
       message: '',
       frasi:[],
       risposta: '',
-      OPENAI_API_KEY: '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',
+      OPENAI_API_KEY: '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',
     };
   },
   methods: {
@@ -39,8 +42,9 @@ export default {
       };
       axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
         .then(response => {
-          this.frasi = [...this.frasi, this.message];
-          this.risposta += response.data.choices[0].message.content + "<br>";
+          this.risposta = response.data.choices[0].message.content;
+          this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": this.risposta} ]];
+          this.message = "";
         })
         .catch(error => {
           console.error(error);
