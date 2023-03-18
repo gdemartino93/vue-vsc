@@ -69,7 +69,7 @@ export const store = reactive({
     {
       id: 5,
       name: "AI",
-      img: "json-icon.svg",
+      img: "ai-icon.png",
       path: "/ai",
     },
   ],
