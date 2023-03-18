@@ -2,18 +2,30 @@
   <section class="main-code padding-lg">
     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto">
       <h3 class="text-center fw-bold fs-3 mb-4">ChatGPT:</h3>
-      <p></p>
-      <div class="col-4">
+      <p>ChatGPT è diventato uno strumento indispensabile per gli sviluppatori. <br>
+Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi preziosi durante lo sviluppo di applicazioni. Ad esempio, ChatGPT può essere utilizzato per generare documentazione, messaggi di errore e avvisi, messaggi di feedback degli utenti e molto altro. <br> Inoltre, gli sviluppatori possono utilizzare ChatGPT per automatizzare il processo di testing e revisionare il codice. <br> In breve, ChatGPT rappresenta uno strumento che può fare la differenza nella vita di ogni sviluppatore, permettendo loro di concentrarsi sui compiti più importanti e di migliorare la qualità del loro lavoro. <br>
+
+</p>
+      <div class="col-12">
         <form action="" method="post" @submit.prevent="getReply">
           <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="message">
-          <button class="btn btn-success" type="submit">Invia</button>
+          <button class="btn btn-success my-2" type="submit">Invia</button>
         </form>
       </div>
-      <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column">
-        <span class="domanda">{{ item[0].messaggio }}</span>
-        <span class="risposta">{{ item[1].risposta }}</span>
+      <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4">
+        <div class="box-domanda col-12 col-md-4 col-lg-5">
+          <span class="domanda">{{ item[0].messaggio }}</span>
+        </div>
+        <div class=" box-risposta align-self-end col-12 col-md-4 col-lg-5">
+          <span class="risposta">{{ item[1].risposta }}</span>
+        </div>
+
       </div>
+      <span class="italic">
+  Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
+</span>
     </div>
+    
   </section>
 </template>
 
@@ -68,6 +80,8 @@ export default {
     color: var(--color-text);
     flex: 1;
     min-height: 100vh;
+    // position: relative;
+    // padding: 100px 0;
   
   }
   
@@ -102,22 +116,26 @@ export default {
       width: 3rem;
     }
   }
-  .domanda{
-    padding: 10px;
-    background: green;
-    border-radius: 10px;
-    color: white;
-    width: 30%;
-    align-self: flex-start;
-    text-align: center;
+
+
+  .italic{
+    font-style: italic;
+    text-decoration: underline;
+ 
   }
-  .risposta{
+  .box-domanda{
     padding: 10px;
-    background: cornflowerblue;
-    border-radius: 10px;
-    color: white;
-    width: 30%;
-    align-self: flex-end;
-    text-align: center;
+    background-color: green;
+      .domanda{
+        color: white;
+    }
+  }
+  .box-risposta{
+  padding: 10px;
+  background-color: cornflowerblue;
+      .risposta{
+      color: white;
+      
+    }
   }
   </style>
