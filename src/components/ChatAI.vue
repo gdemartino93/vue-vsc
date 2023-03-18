@@ -12,10 +12,10 @@
         </form>
       </div>
       <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4">
-        <div class="box-domanda col-12 col-md-4 col-lg-5">
+        <div class="box-domanda col-12 col-md-4 col-lg-5 animate__animated animate__bounceInLeft">
           <span class="domanda">{{ item[0].messaggio }}</span>
         </div>
-        <div class=" box-risposta align-self-end col-12 col-md-4 col-lg-5">
+        <div class=" box-risposta align-self-end col-12 col-md-4 col-lg-5 animate__animated  animate__backInRight">
           <span class="risposta">{{ item[1].risposta }}</span>
         </div>
 
