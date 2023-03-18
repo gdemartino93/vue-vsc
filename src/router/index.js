@@ -5,6 +5,7 @@ import About from '../views/pages/About.vue'
 import Contacts from '../views/pages/Contacts.vue'
 import Home from '../components/AppMainCode.vue'
 import Projects from '../views/pages/Projects.vue'
+import AI from '../components/ChatAI.vue'
 import { store } from '../store/store'
 
 const router = createRouter({
@@ -34,6 +35,11 @@ const router = createRouter({
       path: '/cv',
       name: 'cv',
       component: CV,
+    },
+    {
+      path: '/ai',
+      name: 'ai',
+      component: AI,
     },
   ],
 })
