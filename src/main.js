@@ -7,7 +7,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import "./styles/styles.scss";
 import "animate.css";
-
+import dotenv from 'dotenv';
+// dotenv.config()
 /* import the fontawesome core */
 import { library } from "@fortawesome/fontawesome-svg-core";
 
@@ -55,7 +56,6 @@ library.add(
 
 const app = createApp(App);
 
-app.config.globalProperties.$key = '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'
 
 
 app.component("font-awesome-icon", FontAwesomeIcon);

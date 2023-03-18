@@ -32,7 +32,7 @@ export default {
     getReply() {
       const headers = {
         'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + this.$key
+        'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
       };
       const data = {
         'model': 'gpt-3.5-turbo',
@@ -52,7 +52,6 @@ export default {
     }
   },
   mounted(){
-
   }
 }
 </script>
