@@ -3,9 +3,8 @@
     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto">
       <h3 class="text-center fw-bold fs-3 mb-4">ChatGPT:</h3>
       <p>ChatGPT è diventato uno strumento indispensabile per gli sviluppatori. <br>
-Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi preziosi durante lo sviluppo di applicazioni. Ad esempio, ChatGPT può essere utilizzato per generare documentazione, messaggi di errore e avvisi, messaggi di feedback degli utenti e molto altro. <br> Inoltre, gli sviluppatori possono utilizzare ChatGPT per automatizzare il processo di testing e revisionare il codice. <br> In breve, ChatGPT rappresenta uno strumento che può fare la differenza nella vita di ogni sviluppatore, permettendo loro di concentrarsi sui compiti più importanti e di migliorare la qualità del loro lavoro. <br>
-
-</p>
+      Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi preziosi durante lo sviluppo di applicazioni. Ad esempio, ChatGPT può essere utilizzato per generare documentazione, messaggi di errore e avvisi, messaggi di feedback degli utenti e molto altro. <br> Inoltre, gli sviluppatori possono utilizzare ChatGPT per automatizzare il processo di testing e revisionare il codice. <br> In breve, ChatGPT rappresenta uno strumento che può fare la differenza nella vita di ogni sviluppatore, permettendo loro di concentrarsi sui compiti più importanti e di migliorare la qualità del loro lavoro. <br>
+      </p>
       <div class="col-12">
         <form action="" method="post" @submit.prevent="getReply">
           <input class="form-control" type="text" placeholder="Default input" aria-label="default input example" v-model="message">
@@ -21,7 +20,7 @@ Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi
         </div>
 
       </div>
-      <span class="italic">
+      <span class="italic" v-if="!isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
 </span>
     </div>
@@ -38,31 +37,34 @@ export default {
       message: '',
       frasi:[],
       risposta: '',
+      isWorking : false,
     };
   },
   methods: {
-    getReply() {
-      const headers = {
-        'Content-Type': 'application/json',
-        'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
-      };
-      const data = {
-        'model': 'gpt-3.5-turbo',
-        'messages': [{'role': 'user', 'content': this.message}],
-        'temperature': 0.7
-      };
-      axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
-        .then(response => {
-          this.risposta = response.data.choices[0].message.content;
-          this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": this.risposta} ]];
-          this.message = "";
-        
-        })
-        .catch(error => {
-          console.error(error);
-        });
-    }
-  },
+  getReply() {
+
+    const headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Bearer ' + import.meta.env.VITE_API_KEY
+    };
+    const data = {
+      'model': 'gpt-3.5-turbo',
+      'messages': [{'role': 'user', 'content': this.message}],
+      'temperature': 0.7
+    };
+    axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
+      .then(response => {
+        this.risposta = response.data.choices[0].message.content;
+        this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": this.risposta} ]];
+        this.message = "";
+        this.isWorking = true;
+      })
+      .catch(error => {
+        console.error(error);
+        this.isWorking = false;
+      });
+  }
+},
   mounted(){
   }
 }
@@ -121,7 +123,6 @@ export default {
   .italic{
     font-style: italic;
     text-decoration: underline;
- 
   }
   .box-domanda{
     padding: 10px;
