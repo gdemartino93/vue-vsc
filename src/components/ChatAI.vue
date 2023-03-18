@@ -6,9 +6,9 @@
       Questo modello di AI, può aiutare gli sviluppatori a risparmiare tempo e sforzi preziosi durante lo sviluppo di applicazioni. Ad esempio, ChatGPT può essere utilizzato per generare documentazione, messaggi di errore e avvisi, messaggi di feedback degli utenti e molto altro. <br> Inoltre, gli sviluppatori possono utilizzare ChatGPT per automatizzare il processo di testing e revisionare il codice. <br> In breve, ChatGPT rappresenta uno strumento che può fare la differenza nella vita di ogni sviluppatore, permettendo loro di concentrarsi sui compiti più importanti e di migliorare la qualità del loro lavoro. <br>
       </p>
       <div class="col-12">
-        <form action="" method="post" @submit.prevent="getReply">
+        <form action="" method="post" @submit.prevent="getReply" class="my-5">
           <input class="form-control" type="text" placeholder="Chiedimi tutto quello che vuoi" aria-label="Chiedimi tutto quello che vuoi" v-model="message">
-          <button class="btn btn-success my-2" type="submit">Invia</button>
+          <button class="btn btn-success my-2" type="submit" v-if="message.length > 0">Invia</button>
         </form>
       </div>
       <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4">
