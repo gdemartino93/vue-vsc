@@ -11,7 +11,7 @@
           <button class="btn btn-success my-2" type="submit" v-if="message.length > 0">Invia</button>
         </form>
       </div>
-      <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4">
+      <div v-for="(item, index) in frasi" :key="index" class="d-flex flex-column my-3 col-12 gap-4" >
         <div class="box-domanda col-12 col-md-4 col-lg-5 animate__animated animate__bounceInLeft" v-if="item[0].messaggio">
           <span class="domanda" >{{ item[0].messaggio }}</span>
         </div>
@@ -19,11 +19,11 @@
           <span class="risposta">{{ item[1].risposta }}</span>
         </div>
 
-
+        <div ref="lastMessage"></div>
       </div>
       <span class="fs-2 text-danger align-self-end animate__animated  animate__flash" v-if="isWriting">Sta scrivendo</span>
 
-      <span class="italic" v-if="!isWorking">
+      <span class="italic" v-if="isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
 </span>
     </div>
@@ -40,7 +40,7 @@ export default {
       message: '',
       frasi:[],
       risposta: '',
-      isWorking : false,
+      isWorking : true,
       isWriting : false
     };
   },
@@ -60,17 +60,23 @@ export default {
 
     axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
       .then(response => {
-        this.isWriting = false
         this.risposta = response.data.choices[0].message.content;
-        this.frasi = [...this.frasi, [{},{"risposta": this.risposta} ]];
+        this.frasi = [...this.frasi, [{}, {"risposta": this.risposta}]];
+
+        // la seguente riga di codice è stata spostata all'interno di questa funzione
+        this.isWriting = false;
+
         this.message = "";
         this.isWorking = true;
-   
+        this.$refs.lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' })
       })
       .catch(error => {
         console.error(error);
+
+        // la seguente riga di codice è stata rimossa da questa funzione
+        // this.isWriting = true;
+
         this.isWorking = false;
-        this.isWriting = true
       });
   }
 },
