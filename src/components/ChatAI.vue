@@ -82,8 +82,7 @@ export default {
     color: var(--color-text);
     flex: 1;
     min-height: 100vh;
-    // position: relative;
-    // padding: 100px 0;
+
   
   }
   
@@ -127,6 +126,7 @@ export default {
   .box-domanda{
     padding: 10px;
     background-color: green;
+    border-radius: 15px;
       .domanda{
         color: white;
     }
@@ -134,6 +134,7 @@ export default {
   .box-risposta{
   padding: 10px;
   background-color: cornflowerblue;
+  border-radius: 15px;
       .risposta{
       color: white;
       
