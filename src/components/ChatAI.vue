@@ -21,7 +21,7 @@
 
 
       </div>
-      <span class="fs-1 text-danger" v-if="isWriting">Sta scrivendo</span>
+      <span class="fs-2 text-danger align-self-end animate__animated  animate__flash" v-if="isWriting">Sta scrivendo</span>
 
       <span class="italic" v-if="!isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
