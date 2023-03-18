@@ -18,14 +18,13 @@
         <div class=" box-risposta align-self-end col-12 col-md-4 col-lg-5 animate__animated  animate__backInRight" v-if="item[1].risposta">
           <span class="risposta">{{ item[1].risposta }}</span>
         </div>
-
-        <div ref="lastMessage"></div>
       </div>
       <span class="fs-2 text-danger align-self-end animate__animated  animate__flash" v-if="isWriting">Sta scrivendo</span>
 
-      <span class="italic" v-if="isWorking">
+      <span class="italic" v-if="!isWorking">
   Se non dovesse funzionare, molto probabilmente sarà passato del tempo e io mi sarò dimenticato di aggiornare la key, quindi se hai 10 secondi, mandami un messaggio tramite il form in Home Page, così provvedo a sistemare il tutto.
 </span>
+<div ref="lastMessage" class="my-5"></div>
     </div>
     
   </section>
@@ -40,12 +39,12 @@ export default {
       message: '',
       frasi:[],
       risposta: '',
-      isWorking : true,
+      isWorking : false,
       isWriting : false
     };
   },
   methods: {
-  getReply() {
+  async getReply() {
     this.isWriting = true;
     const headers = {
       'Content-Type': 'application/json',
@@ -58,26 +57,24 @@ export default {
     };
     this.frasi = [...this.frasi, [{"messaggio" : this.message},{"risposta": ""} ]];
 
-    axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
+    await axios.post('https://api.openai.com/v1/chat/completions', data, { headers })
       .then(response => {
         this.risposta = response.data.choices[0].message.content;
         this.frasi = [...this.frasi, [{}, {"risposta": this.risposta}]];
-
-        // la seguente riga di codice è stata spostata all'interno di questa funzione
+        // set iswriting to hide is writing msg
         this.isWriting = false;
-
+        // empty vmodel message
         this.message = "";
+        // set isworking to hide disclaimer
         this.isWorking = true;
+
         this.$refs.lastMessage.scrollIntoView({ behavior: 'smooth', block: 'end' })
       })
       .catch(error => {
         console.error(error);
-
-        // la seguente riga di codice è stata rimossa da questa funzione
-        // this.isWriting = true;
-
         this.isWorking = false;
       });
+      this.message = ""
   }
 },
   mounted(){
