@@ -1,7 +1,5 @@
 <!-- FIXARE PADDIND LEFT HOME PAGE -->
 
-
-
 <template>
   <section class="main-code padding-lg">
     <article class="col-12 d-flex flex-wrap">
@@ -12,7 +10,7 @@
       </div>
       <!-- visibile -->
       <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto animate__animated animate__fadeIn my-4 my-lg-2" v-if="store.scritturaTerminata && isMounted">
-
+        <ChatAI />
         <span class="fw-bold fs-3"> &lt;Benvenuto&gt;</span>
         <p class="testo">Benvenuti nel mio sito! <br>
            Sono Gianluca De Martino, uno sviluppatore web appassionato di tecnologia e informatica. <br>
@@ -36,10 +34,12 @@
 import Typewriter from 'typewriter-effect/dist/core';
 import { store } from '../store/store';
 import Form from './Form.vue';
+import ChatAI from './ChatAI.vue';
 
 export default {
   components: {
     Form,
+    ChatAI
   },
   data() {
     return {
