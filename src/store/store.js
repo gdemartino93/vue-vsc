@@ -154,6 +154,54 @@ export const store = reactive({
     },
   },
   projects: [
+    // boolbnb
+    {
+      id: 13,
+      nome: "BoolBnB",
+      descrizione:
+        "Single Page Application ispirata ad AirBnB. Per il backend ho utilizzato Laravel per creare API RESTful. Il frontend l'ho sviluppato con Vue3 per creare interfacce utente dinamiche e interattive. La libreria Pinia store viene utilizzata per gestire lo stato dell'applicazione e semplificare la gestione e la condivisione dei dati tra i vari componenti.",
+      img: "boolbnb.png",
+      linkRepo: "https://github.com/gdemartino93/boolbnb-project-team2",
+      livePreview: "http://boolbnb.gianlucademartino.it/",
+      tecnologieUsate: [
+        {
+          nome: "SCSS",
+          img: "sass-icon.svg",
+        },
+        {
+          nome: "Php",
+          img: "php-icon.svg",
+        },
+        {
+          nome: "Laravel",
+          img: "laravel-icon.svg",
+        },
+        {
+          nome: "MySQL",
+          img: "mysql-icon.svg",
+        },
+        {
+          nome: "API RESTful",
+          img: "json-icon.svg",
+        },
+        {
+          nome: "Bootstrap",
+          img: "bootstrap-icon.svg",
+        },
+        {
+          nome: "Javascript",
+          img: "js-icon.svg",
+        },
+        {
+          nome: "Vue",
+          img: "vue-icon.svg",
+        },
+        {
+          nome: "Pinia",
+          img: "pinia-icon.svg",
+        },
+      ],
+},
     // gelateria react
     {
           id: 9,
