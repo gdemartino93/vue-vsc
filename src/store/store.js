@@ -164,38 +164,6 @@ export const store = reactive({
     },
   },
   projects: [
-        // cryptoangular 
-        {
-          id: 14,
-          nome: "codeHub",
-          descrizione:
-            "Single page application creata con Angular e l'utilizzo di API RESTful. Ottiene tutti i dati delle monete virtuali con la possibilità di aprire ogni singola moneta e consultare il grafico che rappresenta il valore dell'ultimo mese. Nel jumbotron vengono mostrate le primi 10 monete classificate in ordine di rank.",
-          img: "angularcrypto.png",
-          linkRepo: "https://github.com/gdemartino93/angular-crypto-api",
-          livePreview: "https://jade-daffodil-a16a48.netlify.app/",
-          tecnologieUsate: [
-            {
-              nome: "Html",
-              img: "html-icon.svg",
-            },
-            {
-              nome: "SASS",
-              img: "sass-icon.svg",
-            },
-            {
-              nome: "Javascript",
-              img: "js-icon.svg",
-            },
-            {
-              nome: "API RESTful",
-              img: "json-icon.svg",
-            },
-            {
-              nome: "Angular",
-              img: "angular-icon.svg",
-            },
-          ],
-        },
     // boolbnb
     {
       id: 13,
