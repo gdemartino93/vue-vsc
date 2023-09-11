@@ -111,6 +111,16 @@ export const store = reactive({
           name: "Bootstrap",
           img: "bootstrap-icon.svg",
         },
+        {
+          id: 8,
+          name: "Angular",
+          img: "angular-icon.svg",
+        },
+        {
+          id: 9,
+          name: "Typescript",
+          img: "typescript-icon.svg",
+        },
       ],
       backEnd: [
         {
@@ -130,8 +140,8 @@ export const store = reactive({
         },
         {
           id: 4,
-          name: "Java",
-          img: "java-icon.svg",
+          name: "C#",
+          img: "csharp-icon.svg",
         },
       ],
       strumentiUtilizzati: [
@@ -154,6 +164,38 @@ export const store = reactive({
     },
   },
   projects: [
+        // cryptoangular 
+        {
+          id: 14,
+          nome: "codeHub",
+          descrizione:
+            "Single page application creata con Angular e l'utilizzo di API RESTful. Ottiene tutti i dati delle monete virtuali con la possibilità di aprire ogni singola moneta e consultare il grafico che rappresenta il valore dell'ultimo mese. Nel jumbotron vengono mostrate le primi 10 monete classificate in ordine di rank.",
+          img: "angularcrypto.png",
+          linkRepo: "https://github.com/gdemartino93/angular-crypto-api",
+          livePreview: "https://jade-daffodil-a16a48.netlify.app/",
+          tecnologieUsate: [
+            {
+              nome: "Html",
+              img: "html-icon.svg",
+            },
+            {
+              nome: "SASS",
+              img: "sass-icon.svg",
+            },
+            {
+              nome: "Javascript",
+              img: "js-icon.svg",
+            },
+            {
+              nome: "API RESTful",
+              img: "json-icon.svg",
+            },
+            {
+              nome: "Angular",
+              img: "angular-icon.svg",
+            },
+          ],
+        },
     // boolbnb
     {
       id: 13,
@@ -207,7 +249,7 @@ export const store = reactive({
           id: 9,
           nome: "React - (n)Ice Cream  ",
           descrizione:
-            "Un sito creato con React dove tramite una chiamata API otteniamo la lista dei gelati disponibili con la possibilità di filtrarli per categoria.",
+            "Una web app creata con React dove tramite una chiamata API otteniamo la lista dei gelati disponibili con la possibilità di filtrarli per categoria.",
           img: "gelateria.png",
           linkRepo: "https://github.com/gdemartino93/nice-cream-react",
           livePreview: "https://coruscating-scone-6c67f4.netlify.app/",
@@ -234,33 +276,65 @@ export const store = reactive({
             },
           ],
     },
-    // bank card interactive
+    // cryptoangular 
     {
-      id: 1,
-      nome: "Bank Card Interactive",
+      id: 14,
+      nome: "Crypto Angular",
       descrizione:
-        "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio. Il design è moderno e pulito.",
-      img: "bankcard.png",
-      linkRepo: "https://github.com/gdemartino93/interactive-card-bank",
-      livePreview: "https://famous-churros-ba683e.netlify.app/",
+        "Single page application creata con Angular e l'utilizzo di API RESTful. Ottiene tutti i dati delle monete virtuali con la possibilità di aprire ogni singola moneta e consultare il grafico che rappresenta il valore dell'ultimo mese. Nel jumbotron vengono mostrate le primi 10 monete classificate in ordine di rank.",
+      img: "angularcrypto.png",
+      linkRepo: "https://github.com/gdemartino93/angular-crypto-api",
+      livePreview: "https://jade-daffodil-a16a48.netlify.app/",
       tecnologieUsate: [
         {
           nome: "Html",
           img: "html-icon.svg",
         },
         {
-          nome: "CSS",
-          img: "css-icon.svg",
+          nome: "SASS",
+          img: "sass-icon.svg",
         },
         {
           nome: "Javascript",
           img: "js-icon.svg",
         },
         {
-          nome: "Vue3",
-          img: "vue-icon.svg",
+          nome: "API RESTful",
+          img: "json-icon.svg",
+        },
+        {
+          nome: "Angular",
+          img: "angular-icon.svg",
         },
       ],
+    },
+    // bank card interactive
+    {
+          id: 1,
+          nome: "Bank Card Interactive",
+          descrizione:
+            "Il sito utilizza HTML, CSS e JS Vanilla per rappresentare una carta di credito con autoriempimento tramite form. Le informazioni inserite dall'utente vengono verificate prima dell'invio. Il design è moderno e pulito.",
+          img: "bankcard.png",
+          linkRepo: "https://github.com/gdemartino93/interactive-card-bank",
+          livePreview: "https://famous-churros-ba683e.netlify.app/",
+          tecnologieUsate: [
+            {
+              nome: "Html",
+              img: "html-icon.svg",
+            },
+            {
+              nome: "CSS",
+              img: "css-icon.svg",
+            },
+            {
+              nome: "Javascript",
+              img: "js-icon.svg",
+            },
+            {
+              nome: "Vue3",
+              img: "vue-icon.svg",
+            },
+          ],
     },
     // whatsapp web
     {
