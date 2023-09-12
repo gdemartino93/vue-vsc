@@ -12,17 +12,41 @@
         Il mio obiettivo è continuare a crescere come sviluppatore e contribuire alla realizzazione ed al mantenimento di progetti innovativi.
       </p>
     </div>
-    <!-- ... (il resto del tuo template rimane invariato) ... -->
+     <!-- sezione frontend -->
+     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column mx-auto">
+        <h3 class="text-center mb-4 fw-bold fs-2 mt-3">Tecnologie Front-End</h3>
+          <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5">
+
+            <div v-for="skillFront in skill.frontEnd" class="box col-3 justify-content-center align-items-center">
+                <img :src="`/assets/${skillFront.img}`" :alt="skillFront.name">
+            </div>
+          </div>
+          <!-- sezione backend -->
+          <h3 class="text-center my-4 fw-bold fs-2">Tecnologie Back-End</h3>
+          <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5">
+            <div v-for="skillBack in skill.backEnd"  class="box col-3 justify-content-center align-items-center">
+                <img :src="`/assets/${skillBack.img}`" :alt="skillBack.name">
+            </div>
+          </div>
+          <!-- sezione strumenti utilizzati -->
+          <h3 class="text-center my-4 fw-bold fs-2">Strumenti che utilizzo</h3>
+          <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5 mb-5">
+            <div v-for="strumenti in skill.strumentiUtilizzati"  class="box col-3 justify-content-center align-items-center">
+                <img :src="`/assets/${strumenti.img}`" :alt="strumenti.name">
+            </div>
+          </div>
+      </div>
   </section>
 </template>
 
 <script>
+import { store } from '../../store/store';
 export default {
   data() {
     return {
-      // Aggiungi una variabile per la data di nascita
+      store,
       dataNascita: '07/12/1993',
-      isVisible: false // Aggiunge la proprietà "isVisible" al componente e la inizializza a false
+      isVisible: false
     };
   },
   computed: {
@@ -31,8 +55,6 @@ export default {
       const dataNascitaDate = new Date(this.dataNascita);
 
       const differenzaAnni = dataCorrente.getFullYear() - dataNascitaDate.getFullYear();
-
-      // Verifica se il compleanno per quest'anno è già passato
       if (
         dataCorrente.getMonth() < dataNascitaDate.getMonth() ||
         (dataCorrente.getMonth() === dataNascitaDate.getMonth() && dataCorrente.getDate() < dataNascitaDate.getDate())

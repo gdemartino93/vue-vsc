@@ -93,31 +93,26 @@ export const store = reactive({
         },
         {
           id: 4,
-          name: "React.js",
-          img: "react-icon.svg",
-        },
-        {
-          id: 5,
           name: "Vue.js",
           img: "vue-icon.svg",
         },
         {
-          id: 6,
+          id: 5,
           name: "Sass",
           img: "sass-icon.svg",
         },
         {
-          id: 7,
+          id: 6,
           name: "Bootstrap",
           img: "bootstrap-icon.svg",
         },
         {
-          id: 8,
+          id: 7,
           name: "Angular",
           img: "angular-icon.svg",
         },
         {
-          id: 9,
+          id: 8,
           name: "Typescript",
           img: "typescript-icon.svg",
         },
