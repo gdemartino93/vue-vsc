@@ -56,11 +56,7 @@ export default {
             </span>
         </article>
         <Form class="contact-form col-10 col-md-8 col-lg-10 mx-auto d-flex flex-column gap-5 pb-5" />
-      </div>
-
-
-
-     
+      </div>   
   </section>
 </template>
 
