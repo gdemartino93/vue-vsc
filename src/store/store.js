@@ -138,6 +138,11 @@ export const store = reactive({
           name: "C#",
           img: "csharp-icon.svg",
         },
+        {
+          id: 5,
+          name: "RabbitMq",
+          img: "rabbitmq-icon.svg",
+        },
       ],
       strumentiUtilizzati: [
         {
@@ -154,6 +159,11 @@ export const store = reactive({
           id: 3,
           name: "Postman",
           img: "post-icon.svg",
+        },
+        {
+          id: 4,
+          name: "Azure DevOps",
+          img: "azure-icon.svg",
         },
       ],
     },
