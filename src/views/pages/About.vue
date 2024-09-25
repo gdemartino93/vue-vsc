@@ -3,10 +3,14 @@
     <div class="col-10 col-md-8 col-lg-10 d-flex flex-column justify-content-center mx-auto">
       <h3 class="text-center fw-bold fs-3 mb-4">Parlo di me:</h3>
       <!-- parte testo -->
-      <p class="">Mi chiamo Gianluca De Martino ed ho {{ eta }} anni ed ho una forte passione per l'informatica. <br>
-        Mi piace programmare e mi dedico costantemente all'apprendimento di nuove tecnologie che suscitano il mio interesse. <br>
-        Inoltre <span class="fw-bold"> sono fiero di annunciare che ho creato questo sito portfolio da zero che, </span> oltre a rappresentare un'opportunità per mettere in pratica le mie competenze, spero possa dimostrare anche <span class="fw-bold">la mia passione per questo mondo.</span>  <br>
-        Il mio obiettivo è continuare a crescere come sviluppatore e contribuire alla realizzazione ed al mantenimento di progetti innovativi.
+      <p>
+        Sono Gianluca De Martino, uno sviluppatore specializzato nello sviluppo di applicazioni complesse con esperienza nei settori dell'energia e della logistica e transporti. <br>
+        Nel settore della logistica, mi dedico alla digitalizzazione dei processi per ferrovie, porti e interporti, contribuendo all'ottimizzazione dei flussi operativi e all'integrazione tecnologica delle infrastrutture di trasporto. <br>
+
+        Nel settore energetico, mi occupo di progetti dedicati al monitoraggio ambientale nei porti, sviluppando applicazioni che raccolgono e analizzano i dati sui parametri di inquinamento. Queste soluzioni permettono non solo di gestire le condizioni ambientali in tempo reale, ma anche di fornire al pubblico informazioni trasparenti e accessibili sulle condizioni ambientali di aree critiche, contribuendo a una maggiore consapevolezza e sostenibilità. <br>
+        
+        Lavoro con tecnologie come Angular per il frontend, C# con .NET per il backend, e RabbitMQ per la gestione dei messaggi, implementando architetture a microservizi per garantire scalabilità e efficienza. <br>
+        Mi dedico costantemente all'apprendimento di nuove tecnologie. Il mio obiettivo è continuare a crescere come sviluppatore e contribuire attivamente a progetti che generano un impatto positivo nei settori in cui opero.
       </p>
     </div>
      <!-- sezione frontend -->
