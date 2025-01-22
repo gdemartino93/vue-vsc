@@ -15,6 +15,13 @@
     </div>
      <!-- sezione frontend -->
      <div class="col-10 col-md-8 col-lg-10 d-flex flex-column mx-auto">
+      <h3 class="text-center mb-4 fw-bold fs-2 mt-3">Certificazioni</h3>
+      <div v-for="cert in store.certifications" :alt="cert.name" class="box col-3 justify-content-center align-items-center">
+        <a :href="cert.link" target="_blank" rel="noopener noreferrer">
+          <img :src="`/assets/${cert.img}`" :alt="cert.name">
+        </a>
+      </div>
+
         <h3 class="text-center mb-4 fw-bold fs-2 mt-3">Tecnologie Front-End</h3>
           <div v-for="skill in store.skills" class="d-flex justify-content-between flex-wrap gap-5">
             <div v-for="skillFront in skill.frontEnd" class="box col-3 justify-content-center align-items-center">
@@ -109,7 +116,7 @@ export default {
     scale: 1.2;
   }
   img{
-    width: 3rem;
+    width: 5rem;
   }
 }
 

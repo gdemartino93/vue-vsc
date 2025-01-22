@@ -73,6 +73,15 @@ export const store = reactive({
       path: "/ai",
     },
   ],
+  certifications:[
+    {
+      id: 1,
+      name: "AZ-900 Azure Fundamentals",
+      img: "az900.png",
+      link: "https://learn.microsoft.com/api/credentials/share/it-it/GianlucaDeMartino-1476/D0A13A4BD97D2D73?sharingId=A232D40CEA9EA236"
+
+    }
+  ],
   skills: {
     skills: {
       frontEnd: [
@@ -140,6 +149,11 @@ export const store = reactive({
         },
         {
           id: 5,
+          name: ".NET",
+          img: "dotnet-icon.svg"
+        },
+        {
+          id: 6,
           name: "RabbitMq",
           img: "rabbitmq-icon.svg",
         },
