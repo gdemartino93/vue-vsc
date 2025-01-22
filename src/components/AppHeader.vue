@@ -47,7 +47,7 @@ export default {
         <input
           type="text"
           disabled
-          placeholder="Gianluca De Martino - Jr Full Stack Web Developer"
+          placeholder="Gianluca De Martino - Full Stack Web Developer"
           aria-describedby="button-addon1"
           class="form-control border-0 search-bar"
         />

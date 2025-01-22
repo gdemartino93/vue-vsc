@@ -69,7 +69,7 @@ export default {
         .pauseFor(300)
         .typeString("Sono Gianluca, <br> Web Developer. <br>")
         .deleteChars(15)
-        .typeString('Jr. Full Stack Web Developer.')
+        .typeString('Full Stack Web Developer.')
         .pauseFor(300)
         .start()
         .callFunction(() => {
